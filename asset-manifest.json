@@ -1,0 +1,15 @@
+{
+  "files": {
+    "main.css": "/Dhairya432rp/static/css/main.e4435358.css",
+    "main.js": "/Dhairya432rp/static/js/main.32893a57.js",
+    "static/js/787.c18e5e2a.chunk.js": "/Dhairya432rp/static/js/787.c18e5e2a.chunk.js",
+    "index.html": "/Dhairya432rp/index.html",
+    "main.e4435358.css.map": "/Dhairya432rp/static/css/main.e4435358.css.map",
+    "main.32893a57.js.map": "/Dhairya432rp/static/js/main.32893a57.js.map",
+    "787.c18e5e2a.chunk.js.map": "/Dhairya432rp/static/js/787.c18e5e2a.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.e4435358.css",
+    "static/js/main.32893a57.js"
+  ]
+}
