@@ -98,8 +98,8 @@ const Home = () => {
                 </div>
                 <br/><br/> */}
             
-            <div className="lg:hidden inline-block md:inline-block  justify-center fixed  bottom-[74px] ">
-    <div className="box-content h-[75px] md:w-screen  w-full bg-slate-200 fixed  ">
+            <div className="lg:hidden inline-block md:inline-block  justify-center   ">
+    <div className="box-content h-[75px] md:w-screen  w-full bg-slate-200 fixed bottom-0  ">
                 
       <button type="button" onClick={gotoBtn} class="py-4 px-28  mx-auto flex  gap-2  border border-transparent font-bold bg-orange-500   mt-3  shadow-lg text-white hover:bg-gray-900 focus:outline-none focus:ring-2 focus:ring-gray-800 focus:ring-offset-2 transition-all text-sm dark:focus:ring-gray-900 dark:focus:ring-offset-gray-800">
       Search a pet</button> 

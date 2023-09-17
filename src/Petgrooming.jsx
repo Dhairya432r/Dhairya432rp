@@ -478,8 +478,8 @@ How Pet Grooming works at your home? */}
 </div>
   </div>
   </div>
-<div className="lg:hidden inline-block  justify-center fixed bottom-[74px] left-0 ">
-    <div className="box-content h-[75px] w-full bg-slate-200 fixed  ">
+<div className="lg:hidden inline-block  justify-center   ">
+    <div className="box-content h-[75px] w-full bg-slate-200 fixed  left-0 bottom-0  ">
                 
       <button type="button" onClick={gotoBtn2} class="py-4 px-28  mx-auto flex  gap-2  border border-transparent font-bold bg-orange-500   mt-3  shadow-lg text-white hover:bg-gray-900 focus:outline-none focus:ring-2 focus:ring-gray-800 focus:ring-offset-2 transition-all text-sm dark:focus:ring-gray-900 dark:focus:ring-offset-gray-800">
       Book a  Groomer</button> 

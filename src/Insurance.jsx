@@ -205,8 +205,8 @@ A pet without insurance can be expensive to maintain overall health and well-bei
 
 
 {/* Insurance button */}
-<div className="lg:hidden inline-block  justify-center fixed bottom-[74px] ">
-    <div className="box-content h-[75px] w-full bg-slate-200 fixed  ">
+<div className="lg:hidden inline-block  justify-center  ">
+    <div className="box-content h-[75px] w-full bg-slate-200 fixed bottom-0 left-0 ">
                 
       <button type="button" onClick={gotoBtn5} class="py-4 px-28  mx-auto flex  gap-2  border border-transparent font-bold bg-orange-500   mt-3  shadow-lg text-white hover:bg-gray-900 focus:outline-none focus:ring-2 focus:ring-gray-800 focus:ring-offset-2 transition-all text-sm dark:focus:ring-gray-900 dark:focus:ring-offset-gray-800">
       Buy a pet Insurance</button> 
