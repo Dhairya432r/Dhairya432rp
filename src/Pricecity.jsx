@@ -53,7 +53,7 @@ function classNames(...classes) {
   })
 
   return (
-    <div className="w-full max-w-md ml-0 lg:ml-[450px] px-2 py-16 sm:px-0">
+    <div className="w-full max-w-md mx-auto  px-2 py-16 sm:px-0">
       <Tab.Group>
         <Tab.List className="flex space-x-1 rounded-xl bg-blue-900/20 p-1">
           {Object.keys(categories).map((category) => (

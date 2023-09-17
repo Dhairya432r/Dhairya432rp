@@ -4,7 +4,7 @@ const Footer = () => {
   return (
     <>
     {/* lg mate che */}
-    <div className='  hidden bg-cyan-900 lg:mt-6 lg:flex justify-evenly'>
+    <div className='  hidden bg-cyan-900 lg:mt-0 lg:flex  justify-evenly'>
 
 <div className='inline-block lg:ml-1 mt-10 text-white'>
 <div className=' lg:ml-1 text-sm font-extrabold text-gray-800 mb-4'>
@@ -65,17 +65,17 @@ Policy </div>
     
 </div>
 </div>
-<div className='bg-blue-900 text-white  hidden lg:block h-16 flex mt-0 '>
-    <div className='lg:ml-10 mt-0 '>
+<div className='bg-blue-900 text-white hidden   lg:flex justify-evenly  h-16  mt-0 '>
+    <div className=' my-auto '>
 © Gujarat, India</div>
-<div className='lg:ml-[750px] mt-1' >
+<div className=' my-auto justify-end  ' >
 Petdos Online Pvt Ltd © 2019-2023, All Rights Reserved
 </div></div>
 
 
 
 {/* sm mate che */}
-<div className='bg-cyan-900  block lg:hidden'>
+<div className='bg-cyan-900 md:flex block h-[500px] lg:hidden'>
 <div className='flex'>
     
     <ul className='font-bold text-white text-sm  mt-8 ml-4'>
@@ -129,10 +129,11 @@ Petdos Online Pvt Ltd © 2019-2023, All Rights Reserved
         <div className='flex  '>
        <img src="./assets/images/fb.png" className='h-8 w-8 mt-4'/>
        <img src="./assets/images/insta.png" className='h-8 w-8 ml-6 mt-4'/>
-       <img src="./assets/images/youtube.png" className='h-10 w-10 mt-3 ml-6 '/></div>
+       <img src="./assets/images/youtube.png" className='h-8 w-8 mt-4 ml-4 '/></div>
     </ul>
     </div>
     </div>
+    
     <div className='bg-blue-900 text-white mt-0 lg:hidden  h-16 flex '>
     <div className='lg:ml-10  mt-4'>
 © Gujarat, India</div>
@@ -140,6 +141,7 @@ Petdos Online Pvt Ltd © 2019-2023, All Rights Reserved
 Petdos Online Pvt Ltd © 2019-2023, All Rights Reserved
 </div>
 </div>
+
     </>
   )
 }
