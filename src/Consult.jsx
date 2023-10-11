@@ -58,7 +58,7 @@ const Consult = () => {
 
 {/* How Online Veterinarian Service works? */}
 {/* lg mate che */}
-<div className='mt-72 lg:text-4xl font-extrabold md:mt-96 text-gray-600 text-center'>
+<div className='mt-72 lg:text-4xl font-extrabold md:mt-96 md:text-3xl text-gray-600 text-center'>
 How Online Veterinarian Service works?
 </div><br/><br/>
 <div className='lg:flex hidden'>
@@ -168,13 +168,13 @@ How Online Veterinarian Service works?
 </div>
 </div>
 <div className='inline-block mt-10  ml-32'>
-  <img src='./assets/images/blue tick.png' className='h-14 mb-2 w-14'/>
-  <img src='./assets/images/blue tick.png' className='h-14 mb-2 w-14'/>
-  <img src='./assets/images/blue tick.png' className='h-14 mb-2 w-14'/>
-  <img src='./assets/images/blue tick.png' className='h-14 mb-2 w-14'/>
-  <img src='./assets/images/blue tick.png' className='h-14 mb-2 w-14'/>
-  <img src='./assets/images/blue tick.png' className='h-14 mb-2 w-14'/>
-  <img src='./assets/images/blue tick.png' className='h-14 mb-2 w-14'/>
+  <img src='./assets/images/bluetick.png' className='h-14 mb-2 w-14'/>
+  <img src='./assets/images/bluetick.png' className='h-14 mb-2 w-14'/>
+  <img src='./assets/images/bluetick.png' className='h-14 mb-2 w-14'/>
+  <img src='./assets/images/bluetick.png' className='h-14 mb-2 w-14'/>
+  <img src='./assets/images/bluetick.png' className='h-14 mb-2 w-14'/>
+  <img src='./assets/images/bluetick.png' className='h-14 mb-2 w-14'/>
+  <img src='./assets/images/bluetick.png' className='h-14 mb-2 w-14'/>
   </div>
   <div className='inline-block mt-10 ml-6 font-semibold '>
     <h1 className=' mt-2 mb-11'>On Demand Consultations</h1>

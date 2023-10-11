@@ -1,19 +1,84 @@
-import React, { useState } from 'react';
+import React, { useState ,useEffect} from 'react';
 import {Link} from'react-router-dom';
+import { googleLogout, useGoogleLogin } from '@react-oauth/google';
+import axios from 'axios';
+import Cookies from 'js-cookie';
 import('preline')
 
 function NavBar() {
-    const [isDropdownOpen, setIsDropdownOpen] = useState(false);
+ 
+  const [user, setUser] = useState(null); // Initialize user as null
+  const [profile, setProfile] = useState([]);
+  
+  const login = useGoogleLogin({
+      onSuccess: (codeResponse) => {
+          setUser(codeResponse);
+          // Store the user data in a cookie
+          Cookies.set('user', JSON.stringify(codeResponse));
+      },
+      onError: (error) => console.log('Login Failed:', error)
+  });
+
+  // ... rest of the code remains unchanged
+  useEffect(() => {
+      // Check if the 'user' cookie exists
+      const storedUser = Cookies.get('user');
+      if (storedUser) {
+          setUser(JSON.parse(storedUser));
+      }
+  }, []);
+
+  useEffect(() => {
+      if (user) {
+          axios
+              .get(`https://www.googleapis.com/oauth2/v1/userinfo?access_token=${user.access_token}`, {
+                  headers: {
+                      Authorization: `Bearer ${user.access_token}`,
+                      Accept: 'application/json'
+                  }
+              })
+              .then((res) => {
+                  setProfile(res.data);
+
+                  // Send user data to the backend API using Axios POST request
+                  const userData = {
+                      name: res.data.name,
+                      email: res.data.email,
+                      picture:res.data.picture
+                  };
+                  
+                  axios.post('http://localhost:5000/api/user', userData) // Replace '/api/user' with your backend endpoint
+                      .then(response => {
+                          console.log('User data sent successfully:', response.data);
+                      })
+                      .catch(error => {
+                          console.error('Error sending user data:', error);
+                      });
+              })
+              .catch((err) => console.log(err));
+      }
+  }, [user]);
+
+  const logOut = () => {
+      // Remove the 'user' cookie and log the user out
+      Cookies.remove('user');
+      googleLogout();
+      setUser(null);
+      setProfile(null);
+  };
   
     const scrollToTop = () => {
       window.scrollTo(0, 0)
   }
   
     return (
-        <header class="fixed flex  flex-wrap sm:justify-start sm:flex-nowrap z-50 w-full bg-white text-sm py-4 dark:bg-gray-800">
+        <header class="fixed flex border-gray-100 border-[2px] flex-wrap sm:justify-start sm:flex-nowrap z-50 w-full bg-white text-sm py-4 dark:bg-gray-800">
         <nav class="max-w-[85rem] w-full mx-auto md:px-10 px-4 sm:flex sm:items-center sm:justify-between" aria-label="Global">
           <div class="flex items-center justify-between">
-            <img src='https://dm6g3jbka53hp.cloudfront.net/static-images/tpn-logo-v1.png' alt='' className='w-56 h-10 '/>
+            <div className='flex'>
+          <img src='https://img.freepik.com/free-vector/adopt-pet-concept_23-2148523582.jpg' alt='' className=' lg:h-10 h-7 '/>
+            <h1 className='mr-2 text-2xl font-adelia text-orange-500'>Addo</h1> <h1 className='text-2xl text-orange-400 font-adelia'>pet</h1>
+           </div>
             <div class="sm:hidden">
               <button type="button" class="hs-collapse-toggle p-2 inline-flex justify-center items-center gap-2 rounded-md border font-medium bg-white text-gray-700 shadow-sm align-middle hover:bg-gray-50 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-offset-white focus:ring-blue-600 transition-all text-sm dark:bg-slate-900 dark:hover:bg-slate-800 dark:border-gray-700 dark:text-gray-400 dark:hover:text-white dark:focus:ring-offset-gray-800" data-hs-collapse="#navbar-collapse-basic" aria-controls="navbar-collapse-basic" aria-label="Toggle navigation">
                 <svg class="hs-collapse-open:hidden w-4 h-4" width="16" height="16" fill="currentColor" viewBox="0 0 16 16">
@@ -139,7 +204,7 @@ function NavBar() {
 
 
                     <div class="flex flex-col">
-                    <Link to = '/'>
+                    <Link to = '/About'>
                     <div class=" text-center   py-0 px-3 rounded-md  text-sm lg:text-2xl text-gray-800 hover:bg-gray-100 focus:ring-2 focus:ring-blue-500 dark:text-gray-400 dark:hover:bg-gray-700 dark:hover:text-gray-300" href="#">
                        <div className="flex justify-center space-x-2">
                        <img src='./assets/images/NavBar9.jpg' className='w-10 relative h-10'/>
@@ -171,12 +236,19 @@ function NavBar() {
                 
               </div>
               <div class="flex ">
-                      <div class="flex items-center gap-x-3.5 py-2 px-3 rounded-md text-sm text-gray-800 hover:bg-gray-100 focus:ring-2 focus:ring-blue-500 dark:text-gray-400 dark:hover:bg-gray-700 dark:hover:text-gray-300" href="#">
-                        Log In
-                      </div>
-                      <div class="flex items-center gap-x-3.5 py-2 px-3 rounded-md text-sm text-gray-800 hover:bg-gray-100 focus:ring-2 focus:ring-blue-500 dark:text-gray-400 dark:hover:bg-gray-700 dark:hover:text-gray-300" href="#">
-                        Sign Up
-                      </div>
+                
+                {user  ?(
+                  <>
+                  <div> <p className='pt-[10px] text-orange-500 text-xs'>{profile.name}</p></div>
+                     <div  onClick={logOut} class="flex items-center gap-x-3.5 py-2 px-3 rounded-md text-sm text-gray-800 hover:bg-gray-100 focus:ring-2 focus:ring-blue-500 dark:text-gray-400 dark:hover:bg-gray-700 dark:hover:text-gray-300" href="#">
+                     Logout
+                   </div> 
+                   </>
+                ) : (
+                      <div onClick={() => login()} class="flex items-center gap-x-3.5 py-2 px-3 rounded-md text-sm text-gray-800 hover:bg-gray-100 focus:ring-2 focus:ring-blue-500 dark:text-gray-400 dark:hover:bg-gray-700 dark:hover:text-gray-300" href="#">
+                      Log In
+                    </div>
+                       )}
                     </div>
               
             </div>

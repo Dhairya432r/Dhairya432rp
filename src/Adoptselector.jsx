@@ -61,7 +61,7 @@ import Osmanabad from './State2/Osmanabad';
 
 
 
-function Adoptpet() {
+function Adoptselector() {
   const [selectedState, setSelectedState] = useState('');
   const [selectedCity, setSelectedCity] = useState('');
 
@@ -83,9 +83,9 @@ function Adoptpet() {
   return (
     <>
     <NavBar/>
-    <div className="lg:flex inline-block pt-[100px] w-full ">
-      <div className="box-content lg:fixed h-[360px]  lg:h-[450px] lg:w-[340px] w-80 mx-auto rounded-3xl border-[1.5px] bg-zinc-200/100 border-gray-300 ">
-      <img src='https://dm6g3jbka53hp.cloudfront.net/static-images/pet-insurance-banner-dancing-dog.gif' className='h-32 w-32 mx-auto'/>
+    <div className="lg:flex inline-block pt-10 w-full ">
+      {/* <img src='https://dm6g3jbka53hp.cloudfront.net/static-images/pet-insurance-banner-dancing-dog.gif'/> */}
+      <div className="box-content lg:fixed h-[650px]  lg:h-[450px] lg:w-[340px] w-full border-[1.5px] bg-zinc-200/100 border-gray-300 ">
         <label className="block font-bold text-2xl text-center lg:mt-24 text-gray-700">Select State:</label>
         <select
           className="mt-2 block lg:w-60 w-44 mx-auto bg-white border border-gray-300 rounded-md py-2 px-3 focus:outline-none focus:ring focus:border-blue-300"
@@ -180,5 +180,5 @@ function Adoptpet() {
      );
    }
 
-   export default Adoptpet;
+   export default Adoptselector;
 

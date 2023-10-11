@@ -10,7 +10,8 @@ const Insurance = () => {
   return (
     <>
    <NavBar/>
-    <div className='box-content bg-zinc-200/100 shadow-xl h-[1000px] w-full'>
+   <div ><br/><br/><br/></div>
+    <div className='box-content  bg-zinc-200/100 shadow-xl  h-[1000px] w-full'>
     <div className='lg:flex inline-block md:flex justify-evenly'>
         <div className='inline-block ml-4 '>
         <h1 className='lg:text-4xl text-2xl  mt-16 font-bold text-gray-700'>Best Pet Insurance for your Dog</h1>
@@ -21,10 +22,10 @@ const Insurance = () => {
         <img src='https://dm6g3jbka53hp.cloudfront.net/static-images/pet-insurance-banner-dancing-dog.gif' className='h-[500px]  w-[550px]'/>
         </div>
         <div className='inline-block'>
-        <section class="bg-gray-50 h-[750px] md:h-[950px] md:w-[300px] dark:bg-gray-900">
-  <div class="flex flex-col items-center justify-center md:mt-0 mt-6 px-6 py-8 mx-auto md:h-screen lg:py-0">
+        <section class="bg-gray-50 h-[750px] lg:h-[750px] md:h-[850px] md:w-[300px] dark:bg-gray-900">
+  <div class="flex flex-col items-center justify-center md:mt-0 mt-6  px-6 py-8 mx-auto  lg:py-0">
       
-      <h1 className='text-gray-600 kg:text-3xl text-2xl font-semibold md:mt-0 mb-4 mt-10'>The Best Pet Insurance for a <br/>Lifetime of Care</h1>
+      <h1 className='text-gray-600 lg:text-3xl text-2xl lg:hidden font-semibold md:mt-0 mb-4 mt-10'>The Best Pet Insurance for a <br className='md:hidden'/>Lifetime of Care</h1>
       <div class="w-full  bg-white  rounded-lg shadow dark:border md:mt-0 sm:max-w-md xl:p-0 dark:bg-gray-800 dark:border-gray-700">
           <div class="p-6 space-y-4 md:space-y-6 sm:p-8">
               <h1 class="text-xl font-bold leading-tight tracking-tight text-gray-900 md:text-2xl dark:text-white">
@@ -212,24 +213,30 @@ A pet without insurance can be expensive to maintain overall health and well-bei
       Buy a pet Insurance</button> 
     </div>
 </div>
-
-<div className='lg:flex justify-evenly md:hidden '>
+{/* Lg & sm mate che */}
+<div className='lg:flex justify-evenly mt-96 md:hidden '>
+    <div className='lg:inline-block'>
     <div className='inline-block lg:mt-28 mt-10'>
     <h1  className='lg:text-6xl text-5xl ml-4 font-semibold text-gray-600'>Pet Insurance Makes <br/>a Big Difference</h1><br/>
     <h1 className='text-gray-600 text-center'>Fast claims process, so you and your fur baby can get back to play time</h1>
     <img src='https://dm6g3jbka53hp.cloudfront.net/static-images/pet-insurance__advantage__pet-love.jpg' className='lg:h-[400px] lg:w-[400px]'/>
     </div>
-    <div className='inline-block lg:mt-28 mt-10'>
-        <img src='https://dm6g3jbka53hp.cloudfront.net/static-images/tpn-pet-insurance-example.svg'/>
+    </div>
+    <div className='lg:inline-block'>
+    <div className='inline-block  lg:mt-28 mt-10'>
+        <img className='' src='https://dm6g3jbka53hp.cloudfront.net/static-images/tpn-pet-insurance-example.svg'/>
+    </div>
     </div>
 </div>
-<div className='md:block hidden lg:mt-28 mt-10'>
+ {/* Md mate che */}
+<div className='md:block hidden lg:hidden  mt-10'>
     <h1  className='lg:text-6xl text-5xl ml-4 text-center font-semibold text-gray-600'>Pet Insurance Makes <br/>a Big Difference</h1><br/>
     <h1 className='text-gray-600 text-center'>Fast claims process, so you and your fur baby can get back to play time</h1>
     <img src='https://dm6g3jbka53hp.cloudfront.net/static-images/pet-insurance__advantage__pet-love.jpg' className='lg:h-[400px] lg:w-[400px]'/>
     </div>
-    <div className='md:flex justify-center md:text-2xl hidden lg:mt-28 mt-10'>
-        <img src='https://dm6g3jbka53hp.cloudfront.net/static-images/tpn-pet-insurance-example.svg'/>
+   
+    <div className='md:flex justify-center lg:hidden md:text-2xl hidden lg:mt-28 mt-10'>
+        <img  src='https://dm6g3jbka53hp.cloudfront.net/static-images/tpn-pet-insurance-example.svg'/>
     </div>
    
    <div className=' absolute  mt-20 lg:right-44 right-4 '>
@@ -287,9 +294,9 @@ A pet without insurance can be expensive to maintain overall health and well-bei
         </div>
 </div>
   {/* lg mate che */}
-  <div class=" lg:block hidden mt-80 ">
+  <div class=" lg:block hidden mt-32 ">
    <img src="https://dm6g3jbka53hp.cloudfront.net/static-images/pet-care-pet-insrance-customer-review.jpg" alt="" className="  h-[512px] w-[1100px] mx-auto  " /> 
-    <div class=" absolute box-content bg-white  top-[4600px] border-[2px]  rounded-sm  ml-36 px-0  py-10  h-48 w-[350px]">
+    <div class=" absolute box-content bg-white  top-[4910px] border-[2px]  rounded-sm  ml-36 px-0  py-10  h-48 w-[350px]">
       <div className='box-content bg-orange-500 h-2 w-14 ml-10 mb-4'></div>
       <h1 class="text-gray-600 font-bold text-lg  "> I am glad that I got an Insurance Policy for Moko. Now I am stress-free about his health and at the same time I can take proper care of my lovy duby.-<span className='text-orange-500'> Ankita Khapse</span> </h1><br/>  
        <h1 className='text-gray-600 text-3xl text-center'>We’re The Pet People.</h1>

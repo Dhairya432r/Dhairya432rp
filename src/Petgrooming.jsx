@@ -35,14 +35,14 @@ const Petgrooming = () => {
 <div className='lg:hidden block'> 
     <div class="">
   <div class="absolute left-0 right-0 grid place-items-center">
-  <img src='./assets/images/groming.webp' className='w-full  h-56 md:h-[400px]    '/>
+  <img src='./assets/images/groming.webp' className='w-full  h-60 md:h-[400px] mt-10   '/>
   </div>
 </div>
 <div className=''>
     <div className='absolute left-0 right-0 grid place-items-center'>
-    <div className=' relative  box-content mx-auto bg-white shadow-2xl   rounded-lg pt-4 md:top-[250px] top-[150px] md:px-10 px-2 py-10 '>
-    <p class="text-gray-600 font-extrabold text-lg text-center "> Pet Grooming service that comes<br/> to your home  </p><br/>  
-    <h1 class="text-gray-500 font-semibold text-sm  text-center"> Instantly Book a Professional Pet Groomer Online,<br/> Whenever you need one.
+    <div className=' relative  box-content mx-auto bg-white shadow-2xl md:mt-32  rounded-lg pt-4 md:top-[250px] top-[150px] md:px-28 px-2 py-8 '>
+    <p class="text-gray-600 md:text-2xl font-extrabold text-lg text-center "> Pet Grooming service that comes<br/> to your home  </p><br/>  
+    <h1 class="text-gray-500 font-semibold text-base text-center"> Instantly Book a Professional Pet Groomer<br className='md:hidden'/> Online,<br className='hidden md:block'/> Whenever you need one.
  </h1><br/>   
     <button type="button" class="py-3 px-20 mx-auto  flex justify-center items-center gap-2 rounded-md border border-transparent font-bold bg-orange-500  mb-0 text-white hover:bg-gray-900 focus:outline-none focus:ring-2 focus:ring-gray-800 focus:ring-offset-2 transition-all text-sm dark:focus:ring-gray-900 dark:focus:ring-offset-gray-800">
       Book a Groomer</button>
@@ -51,17 +51,17 @@ const Petgrooming = () => {
     </div>
 </div>
 </div>
-<br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/>
+<br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/>
 <br/><br/>
 <div className='md:block hidden'>
-<br/><br/><br/><br/><br/><br/>
+<br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/>
 </div>
 
 {/* 
 How Pet Grooming works at your home? */}
 
 <div className='overflow-hidden'>
-  <h1 className='lg:text-4xl lg:font-extrabold  text-base font-extrabold text-gray-700  text-center '>How Pet Grooming works at your home?</h1><br/>
+  <h1 className='lg:text-4xl lg:font-extrabold md:text-3xl text-base font-extrabold text-gray-700  text-center '>How Pet Grooming works at your home?</h1><br/>
   <div className='lg:hidden md:flex flex'>
   <img src='./assets/images/puppy.jpg' className=' mx-auto md:w-[500px] md:h-[500px] w-[300px] h-[300px]  mt-10'/>
   </div>

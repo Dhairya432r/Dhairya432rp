@@ -51,26 +51,26 @@ const Home = () => {
 <div className='lg:hidden  md:block block'> 
     <div class="">
   <div class="absolute left-0 right-0 grid place-items-center">
-  <img src='./assets/images/img2.jpg' className='w-full   md:h-[400px] h-56    '/>
+  <img src='./assets/images/img2.jpg' className='w-full   md:h-[400px] h-60  mt-10  '/>
   </div>
 </div>
 <div className=''>
     <div className='absolute left-0 right-0  grid place-items-center'>
-    <div className=' relative  box-content mx-auto bg-white shadow-2xl   rounded-lg pt-4 md:top-[250px] top-[150px] px-2 md:px-10 py-10 '>
-    <p class="text-gray-600 font-extrabold text-lg text-center "> Re-Home and Adopt a Pet in India  </p><br/>  
-    <h1 class="text-gray-500 font-semibold text-base  text-center"> Every Pet Deserves a Good Home. #Adoptlove </h1><br/>   
+    <div className=' relative  box-content mx-auto bg-white shadow-2xl  md:mt-32  rounded-lg pt-4 md:top-[250px] top-[150px] px-2 md:px-28 py-16 '>
+    <p class="text-gray-600 font-extrabold text-lg md:text-2xl text-center "> Re-Home and Adopt a Pet in India  </p><br/>  
+    <h1 class="text-gray-500 font-semibold text-base   text-center"> Every Pet Deserves a Good Home. #Adoptlove </h1><br/>   
     <Link to = '/Adoptpet'>
-    <button type="button" class="py-3 px-20   flex justify-center items-center gap-2 rounded-md border border-transparent font-bold bg-orange-500 lg:ml-[350px] ml-16  mb-0 text-white hover:bg-gray-900 focus:outline-none focus:ring-2 focus:ring-gray-800 focus:ring-offset-2 transition-all text-sm dark:focus:ring-gray-900 dark:focus:ring-offset-gray-800">
+    <button type="button" class="py-3 px-20   flex justify-center items-center gap-2 rounded-md border border-transparent font-bold bg-orange-500 mx-auto  mb-0 text-white hover:bg-gray-900 focus:outline-none focus:ring-2 focus:ring-gray-800 focus:ring-offset-2 transition-all text-sm dark:focus:ring-gray-900 dark:focus:ring-offset-gray-800">
       Adopt</button></Link>
       
       </div>
     </div>
 </div>
 </div>
-<div className="md:block hidden">
+<div className="md:block lg:hidden hidden">
 <br/>
 <br/>
-<br/>
+<br/><br/><br/><br/><br/><br/><br/><br/><br/>
 </div>
 <div className="lg:hidden block">
 <br/>

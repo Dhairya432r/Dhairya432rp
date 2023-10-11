@@ -75,7 +75,7 @@ Petdos Online Pvt Ltd © 2019-2023, All Rights Reserved
 
 
 {/* sm mate che */}
-<div className='bg-cyan-900 md:flex block h-[500px] lg:hidden'>
+<div className='bg-cyan-900 md:flex block h-[500px] md:h-[260px] lg:hidden'>
 <div className='flex'>
     
     <ul className='font-bold text-white text-sm  mt-8 ml-4'>
