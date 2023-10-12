@@ -87,7 +87,7 @@ const Trainning = () => {
 </div>
  
  {/* md mate che */}
- <div className='hidden md:flex mb-[130px] justify-center'>
+ <div className='hidden lg:hidden md:flex mb-[130px] justify-center'>
   <div className='flex'>
 <div className='box-content   bg-sky-400 h-[400px] w-[300px]'>
 <img src='https://i2-prod.kentlive.news/incoming/article648639.ece/ALTERNATES/s615/1_Dog-beach-1.jpg' className='h-[300px] w-[400px]'/>
@@ -127,7 +127,7 @@ const Trainning = () => {
 </p>
    </div>
    <div>
-    <img src='https://dm6g3jbka53hp.cloudfront.net/static-images/dog-training-20200520.png' className='h-[450px] md:h-[600px] md:w-[400px] mx-auto mt-10 w-[300px]' />
+    <img src='https://dm6g3jbka53hp.cloudfront.net/static-images/dog-training-20200520.png' className='h-[450px] lg:h-[500px] md:h-[600px] md:w-[400px] mx-auto mt-10 w-[300px]' />
    </div>
   </div>
 </div>

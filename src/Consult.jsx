@@ -168,13 +168,13 @@ How Online Veterinarian Service works?
 </div>
 </div>
 <div className='inline-block mt-10  ml-32'>
-  <img src='./assets/images/bluetick.png' className='h-14 mb-2 w-14'/>
-  <img src='./assets/images/bluetick.png' className='h-14 mb-2 w-14'/>
-  <img src='./assets/images/bluetick.png' className='h-14 mb-2 w-14'/>
-  <img src='./assets/images/bluetick.png' className='h-14 mb-2 w-14'/>
-  <img src='./assets/images/bluetick.png' className='h-14 mb-2 w-14'/>
-  <img src='./assets/images/bluetick.png' className='h-14 mb-2 w-14'/>
-  <img src='./assets/images/bluetick.png' className='h-14 mb-2 w-14'/>
+  <img src='https://upload.wikimedia.org/wikipedia/commons/thumb/e/e0/Eo_circle_light-blue_checkmark.svg/800px-Eo_circle_light-blue_checkmark.svg.png' className='h-14 mb-2 w-14'/>
+  <img src='https://upload.wikimedia.org/wikipedia/commons/thumb/e/e0/Eo_circle_light-blue_checkmark.svg/800px-Eo_circle_light-blue_checkmark.svg.png' className='h-14 mb-2 w-14'/>
+  <img src='https://upload.wikimedia.org/wikipedia/commons/thumb/e/e0/Eo_circle_light-blue_checkmark.svg/800px-Eo_circle_light-blue_checkmark.svg.png' className='h-14 mb-2 w-14'/>
+  <img src='https://upload.wikimedia.org/wikipedia/commons/thumb/e/e0/Eo_circle_light-blue_checkmark.svg/800px-Eo_circle_light-blue_checkmark.svg.png' className='h-14 mb-2 w-14'/>
+  <img src='https://upload.wikimedia.org/wikipedia/commons/thumb/e/e0/Eo_circle_light-blue_checkmark.svg/800px-Eo_circle_light-blue_checkmark.svg.png' className='h-14 mb-2 w-14'/>
+  <img src='https://upload.wikimedia.org/wikipedia/commons/thumb/e/e0/Eo_circle_light-blue_checkmark.svg/800px-Eo_circle_light-blue_checkmark.svg.png' className='h-14 mb-2 w-14'/>
+  <img src='https://upload.wikimedia.org/wikipedia/commons/thumb/e/e0/Eo_circle_light-blue_checkmark.svg/800px-Eo_circle_light-blue_checkmark.svg.png' className='h-14 mb-2 w-14'/>
   </div>
   <div className='inline-block mt-10 ml-6 font-semibold '>
     <h1 className=' mt-2 mb-11'>On Demand Consultations</h1>

@@ -214,10 +214,10 @@ A pet without insurance can be expensive to maintain overall health and well-bei
     </div>
 </div>
 {/* Lg & sm mate che */}
-<div className='lg:flex justify-evenly mt-96 md:hidden '>
+<div className='lg:flex justify-evenly lg:mt-96 md:hidden '>
     <div className='lg:inline-block'>
     <div className='inline-block lg:mt-28 mt-10'>
-    <h1  className='lg:text-6xl text-5xl ml-4 font-semibold text-gray-600'>Pet Insurance Makes <br/>a Big Difference</h1><br/>
+    <h1  className='lg:text-6xl text-4xl ml-4 text-center font-semibold text-gray-600'>Pet Insurance Makes <br/>a Big Difference</h1><br/>
     <h1 className='text-gray-600 text-center'>Fast claims process, so you and your fur baby can get back to play time</h1>
     <img src='https://dm6g3jbka53hp.cloudfront.net/static-images/pet-insurance__advantage__pet-love.jpg' className='lg:h-[400px] lg:w-[400px]'/>
     </div>

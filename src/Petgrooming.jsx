@@ -165,9 +165,9 @@ How Pet Grooming works at your home? */}
   
 </div>
 <br/>
-<div className='box-content  w-80 py-14 ml-10 bg-white shadow-2xl '>
+{/* <div className='box-content  w-80 py-14 ml-10 bg-white shadow-2xl '>
   <div className='flex '> 
-  <p className='text-2xl font-bold ml-8 text-gray-600 '>Trans-<br/>-furmation<br/> </p>
+  <p className='text-2xl font-bold ml-8 text-gray-600 '>Trans-<br/>-sfurmation<br/> </p>
   <h1 className='ml-14 mt-3 font-bold  text-3xl'>₹1199</h1></div><br/><hr className='w-64 ml-8 h-2'/>
   
   
@@ -188,7 +188,7 @@ How Pet Grooming works at your home? */}
 </div>
   </div>
   
-</div>
+</div> */}
 </div>
 
 
@@ -357,9 +357,9 @@ How Pet Grooming works at your home? */}
   
 </div>
 <br/>
-<div className='box-content  w-80 py-14 ml-10 bg-white shadow-2xl '>
+{/* <div className='box-content  w-80 py-14 ml-10 bg-white shadow-2xl '>
   <div className='flex '> 
-  <p className='text-2xl font-bold ml-8 text-gray-600 '>Trans-<br/>-furmation<br/> </p>
+  <p className='text-2xl font-bold ml-8 text-gray-600 '>Trans-<br/>furmation<br/> </p>
   <h1 className='ml-14 mt-3 font-bold  text-3xl'>₹1199</h1></div><br/><hr className='w-64 ml-8 h-2'/>
   
   
@@ -380,7 +380,7 @@ How Pet Grooming works at your home? */}
 </div>
   </div>
   
-</div>
+</div> */}
 </div>
 {/* md mate che */}
 
