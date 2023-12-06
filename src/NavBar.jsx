@@ -7,72 +7,72 @@ import('preline')
 
 function NavBar() {
  
-  const [user, setUser] = useState(null); // Initialize user as null
-  const [profile, setProfile] = useState([]);
+  // const [user, setUser] = useState(null); // Initialize user as null
+  // const [profile, setProfile] = useState([]);
   
-  const login = useGoogleLogin({
-      onSuccess: (codeResponse) => {
-          setUser(codeResponse);
-          // Store the user data in a cookie
-          Cookies.set('user', JSON.stringify(codeResponse));
-      },
-      onError: (error) => console.log('Login Failed:', error)
-  });
+  // const login = useGoogleLogin({
+  //     onSuccess: (codeResponse) => {
+  //         setUser(codeResponse);
+  //         // Store the user data in a cookie
+  //         Cookies.set('user', JSON.stringify(codeResponse));
+  //     },
+  //     onError: (error) => console.log('Login Failed:', error)
+  // });
 
-  // ... rest of the code remains unchanged
-  useEffect(() => {
-      // Check if the 'user' cookie exists
-      const storedUser = Cookies.get('user');
-      if (storedUser) {
-          setUser(JSON.parse(storedUser));
-      }
-  }, []);
+  // // ... rest of the code remains unchanged
+  // useEffect(() => {
+  //     // Check if the 'user' cookie exists
+  //     const storedUser = Cookies.get('user');
+  //     if (storedUser) {
+  //         setUser(JSON.parse(storedUser));
+  //     }
+  // }, []);
 
-  useEffect(() => {
-      if (user) {
-          axios
-              .get(`https://www.googleapis.com/oauth2/v1/userinfo?access_token=${user.access_token}`, {
-                  headers: {
-                      Authorization: `Bearer ${user.access_token}`,
-                      Accept: 'application/json'
-                  }
-              })
-              .then((res) => {
-                  setProfile(res.data);
+  // useEffect(() => {
+  //     if (user) {
+  //         axios
+  //             .get(`https://www.googleapis.com/oauth2/v1/userinfo?access_token=${user.access_token}`, {
+  //                 headers: {
+  //                     Authorization: `Bearer ${user.access_token}`,
+  //                     Accept: 'application/json'
+  //                 }
+  //             })
+  //             .then((res) => {
+  //                 setProfile(res.data);
 
-                  // Send user data to the backend API using Axios POST request
-                  const userData = {
-                      name: res.data.name,
-                      email: res.data.email,
-                      picture:res.data.picture
-                  };
+  //                 // Send user data to the backend API using Axios POST request
+  //                 const userData = {
+  //                     name: res.data.name,
+  //                     email: res.data.email,
+  //                     picture:res.data.picture
+  //                 };
                   
-                  axios.post('http://localhost:5000/api/user', userData) // Replace '/api/user' with your backend endpoint
-                      .then(response => {
-                          console.log('User data sent successfully:', response.data);
-                      })
-                      .catch(error => {
-                          console.error('Error sending user data:', error);
-                      });
-              })
-              .catch((err) => console.log(err));
-      }
-  }, [user]);
+  //                 axios.post('http://localhost:5000/api/user', userData) // Replace '/api/user' with your backend endpoint
+  //                     .then(response => {
+  //                         console.log('User data sent successfully:', response.data);
+  //                     })
+  //                     .catch(error => {
+  //                         console.error('Error sending user data:', error);
+  //                     });
+  //             })
+  //             .catch((err) => console.log(err));
+  //     }
+  // }, [user]);
 
-  const logOut = () => {
-      // Remove the 'user' cookie and log the user out
-      Cookies.remove('user');
-      googleLogout();
-      setUser(null);
-      setProfile(null);
-  };
+  // const logOut = () => {
+  //     // Remove the 'user' cookie and log the user out
+  //     Cookies.remove('user');
+  //     googleLogout();
+  //     setUser(null);
+  //     setProfile(null);
+  // };
   
     const scrollToTop = () => {
       window.scrollTo(0, 0)
   }
   
     return (
-        <header class="fixed flex border-gray-100 border-[2px] flex-wrap sm:justify-start sm:flex-nowrap z-50 w-full bg-white text-sm py-4 dark:bg-gray-800">
+        <header class="fixed flex border-gray-100 border-[2px] flex-wrap sm:justify-start sm:flex-nowrap z-50 w-full bg-white text-sm py-4">
         <nav class="max-w-[85rem] w-full mx-auto md:px-10 px-4 sm:flex sm:items-center sm:justify-between" aria-label="Global">
           <div class="flex items-center justify-between">
             <div className='flex'>
@@ -184,11 +184,11 @@ function NavBar() {
                      <h1 className="font-semibold my-auto" onClick={scrollToTop}>Pet Walking</h1>
                      </div>
                       </div><br/></Link>
-                      <Link to = '/'>
+                      <Link to = '/PetForm'>
                       <div class=" text-center   py-0 px-3 rounded-md  text-sm lg:text-2xl text-gray-800 hover:bg-gray-100 focus:ring-2 focus:ring-blue-500 dark:text-gray-400 dark:hover:bg-gray-700 dark:hover:text-gray-300" href="#">
                        <div className="flex justify-center space-x-2">
                        <img src='./assets/images/NavBar5.png' className='w-10 relative h-10'/>
-                     <h1 className="font-semibold my-auto" onClick={scrollToTop}>Pet Relocation</h1>
+                     <h1 className="font-semibold my-auto" onClick={scrollToTop}>Pet ReHome</h1>
                      </div>
                       </div><br/></Link>
                       <Link to = '/Insurance'>
@@ -235,7 +235,7 @@ function NavBar() {
                 </div>
                 
               </div>
-              <div class="flex ">
+              {/* <div class="flex ">
                 
                 {user  ?(
                   <>
@@ -249,7 +249,7 @@ function NavBar() {
                       Log In
                     </div>
                        )}
-                    </div>
+                    </div> */}
               
             </div>
           </div>

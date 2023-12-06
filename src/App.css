@@ -37,3 +37,33 @@
   }
 }
 
+.dog-container {
+  position: relative;
+  width: 100%; /* Set the width of the container to the viewport width */
+  height: 150px; /* Set the height of the container to the viewport height */
+  overflow: hidden; /* Hide the overflowing content */
+
+}
+
+
+.dog-gif {
+  position: absolute;
+  left: -100%; /* Initial position, off-screen to the left */
+  animation: slideRight 4s linear infinite;
+  
+}
+.dog-line{
+  
+  border: 2px solid gray;
+  
+
+}
+
+@keyframes slideRight {
+  0% {
+    left: -100%; /* Start from the left */
+  }
+  100% {
+    left: 100%; /* Move to the right, 100% of the container's width */
+  }
+}

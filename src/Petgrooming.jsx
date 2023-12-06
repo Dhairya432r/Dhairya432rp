@@ -51,10 +51,14 @@ const Petgrooming = () => {
     </div>
 </div>
 </div>
+<div className='lg:hidden'>
 <br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/>
-<br/><br/>
-<div className='md:block hidden'>
+<br/><br/></div>
+<div className='md:block  hidden'>
 <br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/>
+</div>
+<div className='lg:block hidden md:hidden'>
+<br/><br/><br/><br/><br/>
 </div>
 
 {/* 
@@ -223,7 +227,7 @@ How Pet Grooming works at your home? */}
   
 </div>
 <br/>
-<div className='box-content  w-80 py-14 ml-10 bg-white shadow-2xl '>
+<div className='box-content  w-80 py-14 ml-10 bg-white shadow-2xl '>                                                           
   <div className='flex '> 
   <p className='text-2xl font-bold ml-8 text-gray-600 '>Full Service<br/><br/></p>
   <h1 className='ml-14 mt-3 font-bold  text-3xl'>₹1499</h1></div><br/><hr className='w-64 ml-8 h-2'/>

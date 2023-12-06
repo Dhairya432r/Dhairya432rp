@@ -1,184 +1,150 @@
-
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
+import axios from 'axios';
+import { Link } from 'react-router-dom';
 import NavBar from './NavBar';
-import City1A from './City1A'; // Import the city components
-// gujarat
-import Ahmedabad from './State/Ahmedabad';
-
-import Vadodara from './State/Vadodara';
-import Surat from './State/Surat';
-import Gandhinagar from './State/Gandhinagar';
-import Rajkot from './State/Rajkot';
-import Jamnagar from './State/Jamnagar';
-import Bhavnagar from './State/Bhavnagar';
-import Junagadh from './State/Junagadh';
-import Anand from './State/Anand';
-import Porbandar from './State/Porbandar';
-import Patan from './State/Patan';
-import Bharuch from './State/Bharuch';
-import Valsad from './State/Valsad';
-import Dwarka from './State/Dwarka';
-import Surendranagar from './State/Surendranagar';
-import Dahod  from './State/Dahod';
-import Morbi from './State/Morbi';
-import Mehsana from './State/Mehsana';
-import Palanpur from './State/Palanpur';
-import Nadiad from './State/Nadiad';
-import Navsari from './State/Navsari';
-import Amreli from './State/Amreli';
-import Bhuj from './State/Bhuj';
-import Botad from './State/Botad';
-
-
-
-//Maharastra
-
-import Pune from './State2/Pune';
-import Mumbai from './State2/Mumbai';
-import Aurangabad from './State2/Aurangabad';
-import Nagpur from './State2/Nagpur';
-import Nashik from './State2/Nashik';
-import Kolhapur from './State2/Kolhapur';
-import Solapur from './State2/Solapur';
-import Amravati from './State2/Amravati';
-import Thane from './State2/Thane';
-import Nanded from './State2/Nanded';
-import Jalgaon from './State2/Jalgaon';
-import Chandrapur from './State2/Chandrapur';
-
-import Ahmednagar from './State2/Ahmednagar';
-import Dhule from './State2/Dhule';
-import Satara from './State2/Satara';
-import Beed from './State2/Beed';
-import Ratnagiri from './State2/Ratnagiri';
-import Wardha from './State2/Wardha';
-import Latur from './State2/Latur';
-import Parbhani from './State2/Parbhani';
-import Jalna from './State2/Jalna';
-import Gondia from './State2/Gondia';
-import Sangli from './State2/Sangli';
-import Osmanabad from './State2/Osmanabad';
-
-
-
-function Adoptpet() {
+import Petdetails from './Petdetails';
+const Adoptpet = () => {
+  const [pets, setPets] = useState([]);
   const [selectedState, setSelectedState] = useState('');
   const [selectedCity, setSelectedCity] = useState('');
+  const [filteredPets, setFilteredPets] = useState([]);
 
-  const cityData = {
-    state1: ['Vadodara', 'Anand', 'Ahmedabad','Surat','Gandhinagar','Jamnagar','Rajkot','Junagadh','Bhavnagar',' Anand','Porbandar','Patan','Bharuch','Valsad','Dwarka','Surendranagar','Mehsana','Morbi','Palanpur','Nadiad','Navsari','Amreli','Bhuj','Botad',],
-    state2: ['Pune', 'Mumbai', 'Aurangabad','Nagpur','Nashik','Kolhapur','Amravati','Solapur','Thane','Nanded','Jalgaon','Chandrapur','Ahmednagar','Dhule','atur','Satara','Beed','Gondia','Ratnagiri','Sangli','Osmanabad'],
-  };
 
-  const handleStateChange = (e) => {
-    setSelectedState(e.target.value);
-    setSelectedCity('');
-  };
+  useEffect(() => {
+    const fetchPets = async () => {
+      try {
+        const response = await axios.get('https://addopet-server.onrender.com/api/pets');
+        setPets(response.data);
+      } catch (error) {
+        // Handle error, e.g., display an error message to the user
+        console.error(error);
+      }
+    };
 
-  const clearSelection = () => {
-    setSelectedState('');
-    setSelectedCity('');
-  };
+    fetchPets();
+  }, []); // Empty dependency array ensures the effect runs once after the initial render
+
+  useEffect(() => {
+    // Filter pets based on selectedState and selectedCity
+    const filtered = pets.filter((pet) => pet.state === selectedState && pet.city === selectedCity);
+    setFilteredPets(filtered);
+  }, [selectedState, selectedCity, pets]);
 
   return (
     <>
-    <NavBar/>
-    <div className="lg:flex inline-block pt-[100px] w-full ">
-      <div className="box-content lg:fixed h-[360px]  lg:h-[450px] lg:w-[340px] w-80 mx-auto rounded-3xl border-[1.5px] bg-zinc-200/100 border-gray-300 ">
-      <img src='https://dm6g3jbka53hp.cloudfront.net/static-images/pet-insurance-banner-dancing-dog.gif' className='h-32 w-32 mx-auto'/>
-        <label className="block font-bold text-2xl text-center lg:mt-24 text-gray-700">Select State:</label>
-        <select
-          className="mt-2 block lg:w-60 w-44 mx-auto bg-white border border-gray-300 rounded-md py-2 px-3 focus:outline-none focus:ring focus:border-blue-300"
-          value={selectedState}
-          onChange={handleStateChange}
-        >
-          <option value="">Select a state</option>
-          <option value="state1">Gujarat</option>
-          <option value="state2">Maharastra</option>
-          {/* Add more states as needed */}
-        </select>
+<NavBar />
+      <div className="lg:flex inline-block pt-[100px]  mb-0 w-full ">
+        <div  className="box-content h-[360px] lg:fixed lg:h-[450px] lg:w-[340px] w-[85%] mx-auto  rounded-3xl border-[1.5px] bg-[#e4e4e7] border-gray-300 ">
+          <img src='https://dm6g3jbka53hp.cloudfront.net/static-images/pet-insurance-banner-dancing-dog.gif' className='h-32 w-32 mx-auto' />
+          
+          <div className='mb-4'>
+            <label htmlFor='state' className='block font-bold text-2xl text-center lg:mt-24 text-gray-700'>
+              Select State:
+            </label>
+            <select
+              id='state'
+              value={selectedState}
+              onChange={(e) => setSelectedState(e.target.value)}
+              className='mt-2 block lg:w-60 md:w-64 w-44 mx-auto bg-white border border-gray-300 rounded-md py-2 px-3 focus:outline-none focus:ring focus:border-blue-300'
+            >
+              <option value=''>Select State</option>
+              <option value='Gujarat'>Gujarat</option>
+              <option value='Maharashtra'>Maharashtra</option>
+            </select>
 
-        <label className="block font-bold text-2xl  text-center text-gray-700">Select City:</label>
-        <select
-          className="mt-2 block lg:w-60 w-44 mx-auto bg-white border border-gray-300 rounded-md py-2 px-3 focus:outline-none focus:ring focus:border-blue-300"
-          value={selectedCity}
-          onChange={(e) => setSelectedCity(e.target.value)}
-        >
-          <option value="">Select a city</option>
-          {selectedState &&
-            cityData[selectedState].map((city, index) => (
-              <option key={index} value={city}>
-                {city}
-              </option>
-            ))}
-        </select>
+            {selectedState === 'Gujarat' && (
+              <div className='mt-2'>
+                <label htmlFor='city' className='block font-bold text-2xl  text-center text-gray-700'>
+                  Select City:
+                </label>
+                <select
+                  id='city'
+                  value={selectedCity}
+                  onChange={(e) => setSelectedCity(e.target.value)}
+                  className='mt-2 block lg:w-60 w-44 mx-auto bg-white border border-gray-300 rounded-md py-2 px-3 focus:outline-none focus:ring focus:border-blue-300'
+                >
+                  <option value=''>Select City</option>
+                  <option value='Vadodara'>Vadodara</option>
+                  {/* Add more city options for Gujarat if needed */}
+                </select>
+              </div>
+            )}
 
-        <button
-          className="mt-4 bg-orange-400 flex justify-center mx-auto hover:bg-orange-600 text-white font-semibold py-2 px-4 rounded"
-          onClick={clearSelection}
-        >
-          Clear Selector
-        </button>
+            {selectedState === 'Maharashtra' && (
+              <div className='mt-2'>
+                <label htmlFor='city' className='block font-bold text-2xl  text-center text-gray-700'>
+                  Select City:
+                </label>
+                <select
+                  id='city'
+                  value={selectedCity}
+                  onChange={(e) => setSelectedCity(e.target.value)}
+                  className='mt-2 block lg:w-60 md:w-90 w-44 mx-auto bg-white border border-gray-300 rounded-md py-2 px-3 focus:outline-none focus:ring focus:border-blue-300'
+                >
+                  <option value=''>Select City</option>
+                  <option value='Mumbai'>Mumbai</option>
+                  {/* Add more city options for Maharashtra if needed */}
+                </select>
+              </div>
+            )}
+          </div>
+        </div>
       </div>
-    
-      {/* {selectedCity && (
-        <Anand cityName={selectedCity} />
-      )} */}
-      {/* Gujarat */}
-      {selectedCity === 'Anand' && <Anand />}
-      {selectedCity === 'Vadodara' && <Vadodara />}
-      {selectedCity === 'Ahmedabad' && <Ahmedabad />}
-      {selectedCity === 'Surat' && < Surat/>}
-      {selectedCity === 'Gandhinagar' && < Gandhinagar/>}
-      {selectedCity === 'Mehsana' && < Mehsana/>}
-      {selectedCity === 'Nadiad' && <Nadiad/>}
-      {selectedCity === 'Rajkot' && <Rajkot />}
-      {selectedCity === 'Jamnagar' && <Jamnagar />}
-      {selectedCity === 'Junagadh' && <Junagadh />}
-      {selectedCity === 'Bhavnagar' && <Bhavnagar />}
-      {selectedCity === 'Porbandar' && <Porbandar />}
-      {selectedCity === 'Patan' && < Patan/>}
-      {selectedCity === 'Bharuch' && < Bharuch/>}
-      {selectedCity === 'Valsad' && <Valsad />}
-      {selectedCity === 'Dwarka' && <Dwarka />}
-      {selectedCity === 'Surendranagar' && <Surendranagar />}
-      {selectedCity === 'Mehsana' && <Dahod />}
-      {selectedCity === 'Morbi' && < Morbi/>}
-      {selectedCity === 'Palanpur' && <Palanpur />}
-      {selectedCity === 'Navsari' && <Navsari />}
-      {selectedCity === 'Amreli' && < Amreli/>}
-      {selectedCity === 'Bhuj' && < Bhuj/>}
-      
-      {selectedCity === 'Botad' && <Botad />}
-      {/* Maharastra */}
-      {selectedCity === 'Pune' && <Pune />}
-      {selectedCity === 'Mumbai' && <Mumbai />}
-      {selectedCity === 'Aurangabad' && <Aurangabad />}
-      {selectedCity === 'Nagpur' && <Nagpur />}  
-      {selectedCity === 'Nashik' && <Nashik />}
-      {selectedCity === 'Kolhapur' && <Kolhapur />}
-      {selectedCity === 'Solapur' && < Solapur/>}  
-      {selectedCity === 'Amravati' && <Amravati />}
-      {selectedCity === 'Thane' && < Thane/>}
-      {selectedCity === 'Nanded' && < Nanded/>}  
-      {selectedCity === 'Jalgaon' && <Jalgaon />}
-      {selectedCity === 'Chandrapur' && < Chandrapur/>}
-      {selectedCity === 'Ahmednagar' && < Ahmednagar/>}
-      {selectedCity === 'Dhule' && <Dhule />}
-      {selectedCity === 'Satara' && <Satara />}
-      {selectedCity === 'Beed' && <Beed />}
-      {selectedCity === 'Ratnagiri' && <Ratnagiri />}
-      {selectedCity === 'Wardha' && <Wardha />}
-      {selectedCity === 'Latur' && < Latur/>}
-      {selectedCity === 'Parbhani' && <Parbhani />}
-      {selectedCity === 'Jalna' && <Jalna />}
-      {selectedCity === 'Gondia' && <Gondia />}
-      {selectedCity === 'Sangli' && <Sangli />}
-      {selectedCity === 'Osmanabad' && <Osmanabad/>}
-      </div>
-      </>
-     );
-   }
+      <div className='box-content w-[95%]  border-[1px] lg:w-[900px] lg:ml-[30%] rounded-lg h-full lg:border-2 border-gray-400'>
+      <h1 className='text-3xl text-center animate-bounce  pt-3 text-orange-600  '>Available pets for adoption</h1>
+        <div className=' md:flex md:flex-wrap lg:flex lg:flex-wrap gap-3 space-y-5 lg:space-y-0 md:space-y-0 pt-10 justify-center '>
+        
 
-   export default Adoptpet;
+          {filteredPets.length > 0 ? (
+            filteredPets.map((pet) => (
+              <>
+               <div className=' flex  flex-wrap  justify-center'>
+                <Link to={`/PetDetails/${pet._id}`}>
+                <div  className=' box-content  h-[500px]   border-[1.5px] w-72 shadow-xl border-gray-300 '>
+                  <div key={pet._id} className='items-center mb-4'>
+                    <img src={`https://server4-qtq0.onrender.com/${pet.imageUrl}`} alt={pet.name} className='h-60 mt-3 w-48 mx-auto' />
+                    <h1 key={pet._id} className='text-gray-600 text-2xl font-semibold'>{pet.name}</h1>
+                    <h1 className='text-gray-600 text-base font-semibold'>{pet.age}<br />
+                      {pet.city},  {pet.state}</h1><hr className='mt-2 border-1 ' />
+                    <h1 className='text-gray-600 text-sm font-semibold'>Owner details -</h1>
+                    <div className='flex gap-x-2 mt-2'>
+                      <img src='https://dm6g3jbka53hp.cloudfront.net/static-images/user-icon-20210411.svg' alt='' className='h-10 w-10' />
+                      <div className='inline-block'>
+                        <h1 >Name {pet.username}</h1>
+                        <h1>Number:<a href='#' className='text-blue-600 text-base '>+{pet.mobileNumber}</a></h1>
+                      </div>
+                    </div>
+
+                  </div>
+                  {/* 
+<img src={`http://localhost:5000/${pet.imageUrl}`} alt={pet.name} className='h-20 w-20 rounded-full mr-4' />
+
+            <h1 key={pet._id}>
+              {pet.name}, {pet.age} years old, Vaccinated: {pet.vaccinated ? 'Yes' : 'No'}
+            </h1> */}
+
+                </div></Link>
+              </div>
+              </>
+            ))
+          ) : (
+            <>
+            <div className=''>
+        <div className='dog-container'>
+          <img className='dog-gif h-44 ' src='https://media.tenor.com/oQBNNsF1jA8AAAAi/darklajka-wsl.gif' alt='Running dog' />
+          <img className='w-full h-40' src='./assets/images/logo192.png' />
+        </div>
+        <div className='dog-line '></div>
+      </div>
+            <div className='text-red-500 text-xl'>Sorry, no pets found for the selected state and city.</div>
+          ,</>
+          )}
+        </div>
+      </div>
+    </>
+  );
+};
+
+export default Adoptpet;
+
 

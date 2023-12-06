@@ -258,4 +258,4 @@ How Online Veterinarian Service works?
   )
 }
 
-export default Consult
+export default Consult;

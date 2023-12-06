@@ -15,9 +15,15 @@ import About from './About';
 import Blogs from './Blogs';
 import State from './State';
 import Loader2 from './Loader2';
+import PetDetails from './Petdetails';
+import PetForm from './PetForm';
+import Dhairya from './Dhairya';
 function App() {
   return (
    <>
+
+
+
    
    <HashRouter>
    <Routes>
@@ -36,7 +42,10 @@ function App() {
    <Route path="/Blogs" element={<Blogs/>}/> 
    <Route path="/About" element={<About/>}/> 
    <Route path="/State" element={<State/>}/> 
-   <Route path="/Loader2" element={<Loader2/>}/> 
+   <Route path="/Loader2" element={<Loader2/>}/>
+   <Route path="/PetForm" element={<PetForm/>}/>
+   <Route path="/Dhairya" element={<Dhairya/>}/>
+   <Route path="/Petdetails/:id" element={<PetDetails />} /> 
 
 
 
