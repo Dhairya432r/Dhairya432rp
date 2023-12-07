@@ -116,12 +116,7 @@ const Adoptpet = () => {
                     </div>
 
                   </div>
-                  {/* 
-<img src={`http://localhost:5000/${pet.imageUrl}`} alt={pet.name} className='h-20 w-20 rounded-full mr-4' />
-
-            <h1 key={pet._id}>
-              {pet.name}, {pet.age} years old, Vaccinated: {pet.vaccinated ? 'Yes' : 'No'}
-            </h1> */}
+   
 
                 </div></Link>
               </div>
