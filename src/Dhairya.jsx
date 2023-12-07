@@ -10,6 +10,7 @@ import { toast, Toaster } from "react-hot-toast";
 import Cookies from "js-cookie";
 import Typewriter from 'typewriter-effect'
 import Footer from './Footer'
+import NavBar from './NavBar'
 
 const Dhairya = () => {
  
@@ -101,8 +102,9 @@ const Dhairya = () => {
   return (
     //lg and md mate che
     <>
-    <div className=' bg-blue-gray-100  h-full w-full'>
-      <div className=' flex justify-center lg:gap-44 md:gap-44   '>
+    <NavBar />
+    <div className=' bg-blue-gray-100 pt-24 h-full w-full'>
+      <div className=' flex justify-center lg:gap-44 md:gap-20   '>
         <div className='lg:block md:block hidden  '>
          <img src='https://i.pinimg.com/originals/5e/40/20/5e4020c8ccf8b980c23be800ad8b8da4.gif' className='w-80 rounded-md  mt-[35%] h-96 mx-auto' />
         </div>
