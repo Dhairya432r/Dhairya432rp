@@ -13,7 +13,7 @@ const Adoptpet = () => {
   useEffect(() => {
     const fetchPets = async () => {
       try {
-        const response = await axios.get('https://addopet-server.onrender.com/api/pets');
+        const response = await axios.get('https://finalserver-nrbk.onrender.com/api/pets');
         setPets(response.data);
       } catch (error) {
         // Handle error, e.g., display an error message to the user

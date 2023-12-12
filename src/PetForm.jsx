@@ -1,6 +1,7 @@
 import React, { useState, useContext,useEffect } from 'react';
 import axios from 'axios';
 import NavaBar from './NavBar'
+import { toast, Toaster } from "react-hot-toast";
 import Cookies from 'js-cookie';
 import './App.css'
 import { useNavigate} from 'react-router-dom';
@@ -115,8 +116,9 @@ const PetForm = () => {
     formData.append('detail',detail);
 
     try {
-      await axios.post('https://addopet-server.onrender.com/api/pets', formData,
+      await axios.post('https://finalserver-nrbk.onrender.com/api/pets', formData,
         console.log('successfully'),
+        toast.success('Pet form submitted successfully!'),
         {
 
           headers: {
@@ -127,6 +129,7 @@ const PetForm = () => {
       // Handle success, e.g., show a success message or redirect to the adoption page
     } catch (error) {
       console.log('error try again')
+      toast.error("Please fill all details")
       // Handle error, e.g., display an error message to the user
     }
   };
@@ -389,6 +392,10 @@ const PetForm = () => {
         </div>
         <div className='flex justify-center mx-auto pt-10'>
           <button  className='bg-orange-500 font-semibold lg:w-[25%]  lg:h-10 h-14 rounded-xl w-[63%]'>sumbit</button>        </div>
+          <Toaster
+  position="top-center"
+  reverseOrder={false}
+/>
       </form>
 
       <div className=''>

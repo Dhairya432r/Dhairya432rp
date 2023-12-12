@@ -2,12 +2,12 @@
 import { initializeApp } from "firebase/app";
 import { getAuth } from "firebase/auth";
 const firebaseConfig = {
-  apiKey: "AIzaSyDJ-5n-Hmnk1OcaRszNEo1rKaA8nLhNj3E",
-  authDomain: "brandzi-form.firebaseapp.com",
-  projectId: "brandzi-form",
-  storageBucket: "brandzi-form.appspot.com",
-  messagingSenderId: "584024213601",
-  appId: "1:584024213601:web:b25f897e88360f88384220"
+  apiKey: "AIzaSyCfzKIjPK_Umsovdp9Fpo_1FgCsap4arDE",
+  authDomain: "addo-pet-b602e.firebaseapp.com",
+  projectId: "addo-pet-b602e",
+  storageBucket: "addo-pet-b602e.appspot.com",
+  messagingSenderId: "718058149543",
+  appId: "1:718058149543:web:bc2ca23357430f2067ed82"
 };
 
 // Initialize Firebase
