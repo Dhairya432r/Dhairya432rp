@@ -392,6 +392,7 @@ const PetForm = () => {
         </div>
         <div className='flex justify-center mx-auto pt-10'>
           <button  className='bg-orange-500 font-semibold lg:w-[25%]  lg:h-10 h-14 rounded-xl w-[63%]'>sumbit</button>        </div>
+          <Toaster toastOptions={{ duration: 4000 }} />
           <Toaster
   position="top-center"
   reverseOrder={false}
