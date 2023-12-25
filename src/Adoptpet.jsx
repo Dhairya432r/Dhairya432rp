@@ -102,7 +102,7 @@ const Adoptpet = () => {
                 <Link to={`/PetDetails/${pet._id}`}>
                 <div  className=' box-content  h-[500px]   border-[1.5px] w-72 shadow-xl border-gray-300 '>
                   <div key={pet._id} className='items-center mb-4'>
-                    <img src={`https://server4-qtq0.onrender.com/${pet.imageUrl}`} alt={pet.name} className='h-60 mt-3 w-48 mx-auto' />
+                    <img src={`https://server4-qtq0.onrender.com/api/pets/${pet.imageUrl}`} alt={pet.name} className='h-60 mt-3 w-48 mx-auto' />
                     <h1 key={pet._id} className='text-gray-600 text-2xl font-semibold'>{pet.name}</h1>
                     <h1 className='text-gray-600 text-base font-semibold'>{pet.age}<br />
                       {pet.city},  {pet.state}</h1><hr className='mt-2 border-1 ' />
