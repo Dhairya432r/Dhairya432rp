@@ -147,14 +147,14 @@ const Pet = () => {
 
 
       {/* box with text */}
-      <div class="  bg-[url(https://images.contentstack.io/v3/assets/blt6f84e20c72a89efa/bltd3894bd280c131a6/6261d197787c0839e4c667c5/zpc_og_article_benefits-adopting-pet.jpg)] lg:mx-auto md:h-[600px] lg:mt-1 hidden lg:block md:block  lg:h-[600px] lg:w-[1200px] ">
+      <div class="  bg-[url(https://images.contentstack.io/v3/assets/blt6f84e20c72a89efa/bltd3894bd280c131a6/6261d197787c0839e4c667c5/zpc_og_article_benefits-adopting-pet.jpg)] lg:mx-auto md:h-[600px] lg:mt-1 hidden lg:block md:block  lg:h-[600px] lg:w-[85%] ">
         <div class=" bottom-0 px-4 py-3 bg-gray-500/50 w-full">
           <h1 class="text-white font-semibold text-4xl"> I am very happy to adopt Olivia. I was fortunate enough to find her on Addo Pet. – Alina John's </h1>
           <p class="text-gray-200">
             We’re The Pet People.<a href="#" className="text-orange-500 font-mono ml-6 text-2xl">Learn More ! </a>
           </p>
         </div>
-        <div className="lg:mt-96  lg:ml-[780px] px-1 py-1 bg-gray-500/50 lg:w-96 w-[360px]">
+        <div className="lg:mt-96  lg:ml-[50%] px-1 py-1 bg-gray-500/50 lg:w-96 w-[360px]">
           <h1 class="text-white font-semibold text-xl  ml-1 lg:ml-10"> Alina John's in california,America </h1>
 
         </div>

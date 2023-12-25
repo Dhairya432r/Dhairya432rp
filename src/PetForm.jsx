@@ -120,7 +120,7 @@ const PetForm = () => {
       await axios.post('https://finalserver-nrbk.onrender.com/api/pets', formData,
         console.log('successfully'),
         toast.success('Pet form submitted successfully!'),
-        window.location.reload(),
+        // window.location.reload(),
         {
 
           headers: {
