@@ -97,7 +97,7 @@ const PetForm = () => {
 
   const handleFormSubmit = async (e) => {
     e.preventDefault();
-
+  
     const formData = new FormData();
     formData.append('name', name);
     formData.append("mobileNumber",mobileNumber)
@@ -116,9 +116,11 @@ const PetForm = () => {
     formData.append('detail',detail);
 
     try {
+      // 
       await axios.post('https://finalserver-nrbk.onrender.com/api/pets', formData,
         console.log('successfully'),
         toast.success('Pet form submitted successfully!'),
+        window.location.reload(),
         {
 
           headers: {
@@ -135,13 +137,13 @@ const PetForm = () => {
   };
   useEffect(() => {
     // Check if the mobile number exists in cookies
-    const storedNumber = Cookies.get('mobileNumber');
+    const mobileNumber = Cookies.get('mobileNumber');
 
-    if (!storedNumber) {
+    if (!mobileNumber) {
       // Mobile number doesn't exist in cookies, navigate to login page
       history('/Dhairya'); // Redirect to your login page route
     }
-  }, []);
+  }, [history]);
 
 
 

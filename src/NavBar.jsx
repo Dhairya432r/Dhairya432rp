@@ -3,69 +3,30 @@ import {Link} from'react-router-dom';
 import { googleLogout, useGoogleLogin } from '@react-oauth/google';
 import axios from 'axios';
 import Cookies from 'js-cookie';
+import { useNavigate } from 'react-router-dom';
 import('preline')
 
 function NavBar() {
- 
-  // const [user, setUser] = useState(null); // Initialize user as null
-  // const [profile, setProfile] = useState([]);
   
-  // const login = useGoogleLogin({
-  //     onSuccess: (codeResponse) => {
-  //         setUser(codeResponse);
-  //         // Store the user data in a cookie
-  //         Cookies.set('user', JSON.stringify(codeResponse));
-  //     },
-  //     onError: (error) => console.log('Login Failed:', error)
-  // });
+  const [user, setUser] = useState(null);
+  const history = useNavigate();
+  const login = () => {
+  history('/Dhairya');
 
-  // // ... rest of the code remains unchanged
-  // useEffect(() => {
-  //     // Check if the 'user' cookie exists
-  //     const storedUser = Cookies.get('user');
-  //     if (storedUser) {
-  //         setUser(JSON.parse(storedUser));
-  //     }
-  // }, []);
+}
+useEffect(() => {
+  // Check if the 'mobile' cookie exists
+  const mobileCookieExists = Cookies.get('mobileNumber');
 
-  // useEffect(() => {
-  //     if (user) {
-  //         axios
-  //             .get(`https://www.googleapis.com/oauth2/v1/userinfo?access_token=${user.access_token}`, {
-  //                 headers: {
-  //                     Authorization: `Bearer ${user.access_token}`,
-  //                     Accept: 'application/json'
-  //                 }
-  //             })
-  //             .then((res) => {
-  //                 setProfile(res.data);
+  setUser(mobileCookieExists ? true : false);
+}, []);
 
-  //                 // Send user data to the backend API using Axios POST request
-  //                 const userData = {
-  //                     name: res.data.name,
-  //                     email: res.data.email,
-  //                     picture:res.data.picture
-  //                 };
-                  
-  //                 axios.post('http://localhost:5000/api/user', userData) // Replace '/api/user' with your backend endpoint
-  //                     .then(response => {
-  //                         console.log('User data sent successfully:', response.data);
-  //                     })
-  //                     .catch(error => {
-  //                         console.error('Error sending user data:', error);
-  //                     });
-  //             })
-  //             .catch((err) => console.log(err));
-  //     }
-  // }, [user]);
-
-  // const logOut = () => {
-  //     // Remove the 'user' cookie and log the user out
-  //     Cookies.remove('user');
-  //     googleLogout();
-  //     setUser(null);
-  //     setProfile(null);
-  // };
+  const logOut = () => {
+      // Remove the 'user' cookie and log the user out
+      Cookies.remove('mobileNumber');
+      setUser(null);
+      history('/')
+  };
   
     const scrollToTop = () => {
       window.scrollTo(0, 0)
@@ -235,21 +196,21 @@ function NavBar() {
                 </div>
                 
               </div>
-              {/* <div class="flex ">
+              <div class="flex ">
                 
                 {user  ?(
                   <>
-                  <div> <p className='pt-[10px] text-orange-500 text-xs'>{profile.name}</p></div>
+                  {/* <div> <p className='pt-[10px] text-orange-500 text-xs'>{profile.name}</p></div> */}
                      <div  onClick={logOut} class="flex items-center gap-x-3.5 py-2 px-3 rounded-md text-sm text-gray-800 hover:bg-gray-100 focus:ring-2 focus:ring-blue-500 dark:text-gray-400 dark:hover:bg-gray-700 dark:hover:text-gray-300" href="#">
                      Logout
                    </div> 
                    </>
                 ) : (
-                      <div onClick={() => login()} class="flex items-center gap-x-3.5 py-2 px-3 rounded-md text-sm text-gray-800 hover:bg-gray-100 focus:ring-2 focus:ring-blue-500 dark:text-gray-400 dark:hover:bg-gray-700 dark:hover:text-gray-300" href="#">
+                      <div onClick={login} class="flex items-center gap-x-3.5 py-2 px-3 rounded-md text-sm text-gray-800 hover:bg-gray-100 focus:ring-2 focus:ring-blue-500 dark:text-gray-400 dark:hover:bg-gray-700 dark:hover:text-gray-300" href="#">
                       Log In
                     </div>
                        )}
-                    </div> */}
+                    </div>
               
             </div>
           </div>

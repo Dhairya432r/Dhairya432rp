@@ -12,8 +12,8 @@ import Typewriter from 'typewriter-effect'
 import Footer from './Footer'
 import NavBar from './NavBar'
 
-const Dhairya = () => {
- 
+
+const Dhairya = ( ) => {
   const [otp, setOtp] = useState("");
   const [ph, setPh] = useState("");
   const [loading, setLoading] = useState(false);
@@ -44,6 +44,7 @@ const Dhairya = () => {
     setUser(null); // Reset user state or perform any additional logout steps if required
     setAuthenticated(false);
   };
+
   
 
   function onCaptchVerify() {
@@ -91,7 +92,9 @@ const Dhairya = () => {
         console.log(res);
         setUser(res.user);
         setLoading(false);
-        Cookies.set('mobileNumber',ph);
+        const thirtyDaysInSeconds = 30 * 24 * 60 * 60; // 30 days in seconds
+        const expirationDate = new Date(Date.now() + (thirtyDaysInSeconds * 1000));
+        Cookies.set('mobileNumber',ph,{ expires: expirationDate });
         // history(`/home?mobile=${ph}`);
       })
       .catch((err) => {

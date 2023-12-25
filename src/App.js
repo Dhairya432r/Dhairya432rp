@@ -18,6 +18,7 @@ import Loader2 from './Loader2';
 import PetDetails from './Petdetails';
 import PetForm from './PetForm';
 import Dhairya from './Dhairya';
+import NavBar from './NavBar';
 function App() {
   return (
    <>
@@ -26,7 +27,8 @@ function App() {
 
    
    <HashRouter>
-   <Routes>
+   <Routes>  
+  <Route path="/Dhairya" element={<Dhairya/>}/>
    <Route path="/" element={<Home/>} />
    <Route path="/Service" element={<Service/>}/>
    <Route path="/Petgrooming" element={<Petgrooming/>}/>
@@ -44,7 +46,6 @@ function App() {
    <Route path="/State" element={<State/>}/> 
    <Route path="/Loader2" element={<Loader2/>}/>
    <Route path="/PetForm" element={<PetForm/>}/>
-   <Route path="/Dhairya" element={<Dhairya/>}/>
    <Route path="/Petdetails/:id" element={<PetDetails />} /> 
 
 
