@@ -89,7 +89,7 @@ const PetDetails = () => {
           )}
         >
           <img
-            src={`https://server4-qtq0.onrender.com/${pet.imageUrl}`}
+            src={`https://server4-qtq0.onrender.com/api/pets/${pet.imageUrl}`}
             alt="image 1"
             className="h-full w-full mx-auto object-cover"
           />
