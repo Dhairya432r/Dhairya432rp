@@ -13,7 +13,7 @@ const PetDetails = () => {
   useEffect(() => {
     const fetchPetDetails = async () => {
       try {
-        const response = await axios.get(`https://addopet-server.onrender.com/api/pets/${id}`);
+        const response = await axios.get(`https://server4-qtq0.onrender.com/api/pets/${id}`);
         setPet(response.data);
       } catch (error) {
         console.error(error);
@@ -89,7 +89,7 @@ const PetDetails = () => {
           )}
         >
           <img
-            src={`https://server4-qtq0.onrender.com/api/pets/${pet.imageUrl}`}
+            src={`https://server4-qtq0.onrender.com/${pet.imageUrl}`}
             alt="image 1"
             className="h-full w-full mx-auto object-cover"
           />

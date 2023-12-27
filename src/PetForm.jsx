@@ -117,7 +117,7 @@ const PetForm = () => {
 
     try {
       // 
-      await axios.post('https://finalserver-nrbk.onrender.com/api/pets', formData,
+      await axios.post('https://server4-qtq0.onrender.com/api/pets', formData,//https://server4-qtq0.onrender.com/api/pets
         console.log('successfully'),
         toast.success('Pet form submitted successfully!'),
         // window.location.reload(),
@@ -374,7 +374,7 @@ const PetForm = () => {
               <li className='list-disc marker:text-gray-600 text-[15px] text-gray-600 font-semibold pt-5 '><span className='text-orange-500'>Addo pet</span> provides adopters to meet and learn about cats or dogs from the owners who know them best.</li>
               <li className='list-disc marker:text-gray-600 text-[15px] text-gray-600 font-semibold  '>Loving fur baby families keep their cats or dogs out of the shelter homes. By rehoming a cat or dog, they can find them loving & caring new family.</li>
               <li className='list-disc marker:text-gray-600 text-[15px] text-gray-600 font-semibold  '>Shelter homes can focus only on limited resources for your pet.</li>
-              <li className='list-disc marker:text-gray-600 text-[15px] text-gray-600 font-semibold  '>Your cat or dog goes directly from one loving home to another potential owner. ThePetNest provides a stress-free pet adoption platform theryby reducing the chance of illness or discomfort.</li>
+              <li className='list-disc marker:text-gray-600 text-[15px] text-gray-600 font-semibold  '>Your cat or dog goes directly from one loving home to another potential owner. <span className='text-orange-500'>Addo pet</span> provides a stress-free pet adoption platform theryby reducing the chance of illness or discomfort.</li>
               <li></li>
               <li></li>
             </ul>
@@ -390,7 +390,7 @@ const PetForm = () => {
               <li></li>
             </ul>
           </div>
-          <p className='text-[15px] pt-10 font-semibold text-gray-600'>ThePetNest is India's first pet care marketplace to provide an online pet adoption platform and community where people who want to adopt a dog or cat connect with<br className='lg:block hidden' /> people who need to rehome a dog or cat. The best possible way to care about your beloved pet is to keep them out of the shelter homes and rehoming your dog or <br className='lg:block hidden' />cat to a loving family. Rehoming a dog or cat is the best kind of pet adoption, in every possible way.</p>
+          <p className='text-[15px] pt-10 font-semibold text-gray-600'><span className='text-orange-500'>Addo pet</span> is India's first pet care marketplace to provide an online pet adoption platform and community where people who want to adopt a dog or cat connect with<br className='lg:block hidden' /> people who need to rehome a dog or cat. The best possible way to care about your beloved pet is to keep them out of the shelter homes and rehoming your dog or <br className='lg:block hidden' />cat to a loving family. Rehoming a dog or cat is the best kind of pet adoption, in every possible way.</p>
         </div>
         <div className='flex justify-center mx-auto pt-10'>
           <button  className='bg-orange-500 font-semibold lg:w-[25%]  lg:h-10 h-14 rounded-xl w-[63%]'>sumbit</button>        </div>
