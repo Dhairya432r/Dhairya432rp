@@ -19,6 +19,14 @@ import PetDetails from './Petdetails';
 import PetForm from './PetForm';
 import Dhairya from './Dhairya';
 import NavBar from './NavBar';
+import PetGrommingForm from './PetGrommingForm';
+import ConsultpetForm from './ConsultpetForm';
+import Admin from './Admin';
+import Candiate from './Candiate';
+// import PetListItem from "./PetListItem";
+import EditForm from "./EditForm";
+import Edit from './Edit';
+import Updateforms from './Updateform';
 function App() {
   return (
    <>
@@ -46,8 +54,15 @@ function App() {
    <Route path="/State" element={<State/>}/> 
    <Route path="/Loader2" element={<Loader2/>}/>
    <Route path="/PetForm" element={<PetForm/>}/>
+   <Route path="/PetGrommingForm" element={<PetGrommingForm/>}/>
    <Route path="/Petdetails/:id" element={<PetDetails />} /> 
-
+   <Route path="/Edit/:id" element={<Edit />} /> 
+   <Route path="/ConsultpetForm" element={<ConsultpetForm />} /> 
+   <Route path="/Admin" element={<Admin />} /> 
+   <Route path="/Candiate" element={<Candiate />} /> 
+   <Route path="/Updateform" element={<Updateforms />} /> 
+   {/* <Route path="/PetListItem" component={PetListItem} /> */}
+   {/* <Route path="/EditForm" element={EditForm} /> */}
 
 
    </Routes>

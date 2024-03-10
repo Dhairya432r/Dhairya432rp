@@ -393,7 +393,7 @@ const PetForm = () => {
           <p className='text-[15px] pt-10 font-semibold text-gray-600'><span className='text-orange-500'>Addo pet</span> is India's first pet care marketplace to provide an online pet adoption platform and community where people who want to adopt a dog or cat connect with<br className='lg:block hidden' /> people who need to rehome a dog or cat. The best possible way to care about your beloved pet is to keep them out of the shelter homes and rehoming your dog or <br className='lg:block hidden' />cat to a loving family. Rehoming a dog or cat is the best kind of pet adoption, in every possible way.</p>
         </div>
         <div className='flex justify-center mx-auto pt-10'>
-          <button  className='bg-orange-500 font-semibold lg:w-[25%]  lg:h-10 h-14 rounded-xl w-[63%]'>sumbit</button>        </div>
+        <button  className='bg-orange-500 flex justify-center items-center text-2xl font-semibold lg:w-[20%] text-white font-adelia lg:h-10 h-14 rounded-xl w-[63%]'>sumbit <img src='https://dm6g3jbka53hp.cloudfront.net/static-images/tpn-next-grooming-funnel.png' className='w-5 h-5' /> </button>        </div>
           <Toaster toastOptions={{ duration: 4000 }} />
           <Toaster
   position="top-center"

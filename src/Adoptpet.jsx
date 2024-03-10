@@ -30,6 +30,16 @@ const Adoptpet = () => {
     setFilteredPets(filtered);
   }, [selectedState, selectedCity, pets]);
 
+  const handleDelete = async (id) => {
+    try {
+      await axios.delete(`https://server4-qtq0.onrender.com/${id}`);
+      setPets(pets.filter(pet => pet._id !== id));
+      setFilteredPets(filteredPets.filter(pet => pet._id !== id));
+    } catch (error) {
+      console.error(error);
+    }
+  };
+
   return (
     <>
 <NavBar />
@@ -116,7 +126,7 @@ const Adoptpet = () => {
                     </div>
 
                   </div>
-   
+                  <button onClick={() => handleDelete(pet._id)}>Delete</button>
 
                 </div></Link>
               </div>

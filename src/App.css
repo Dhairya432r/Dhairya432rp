@@ -1,3 +1,17 @@
+
+.price-box {
+  transition: height 3.0s ease; /* Adjust the transition duration as needed */
+  overflow: hidden;
+}
+
+.expanded {
+  height: 200px; /* Adjust the desired expanded height */
+}
+
+.cat-icon, .dog-icon {
+  font-size: 50px;
+  line-height: 1;
+}
 .App {
   text-align: center;
 }

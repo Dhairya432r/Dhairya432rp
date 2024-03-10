@@ -1,4 +1,5 @@
 import React from 'react'
+import { Link } from 'react-router-dom';
 import NavBar from './NavBar';
 import Pricecity from './Pricecity';
 const Petgrooming = () => {
@@ -17,12 +18,13 @@ const Petgrooming = () => {
 </div>
 <div className=''>
     <div className='absolute left-0 right-0 grid place-items-center'>
-    <div className=' relative  box-content mx-auto bg-white shadow-2xl   rounded-sm pt-4 top-[300px]  px-12 py-8 '>
+    <div className=' relative  box-content mx-auto bg-white shadow-2xl   rounded-sm pt-4 top-[300px]  px-1 py-8 '>
     <p class="text-gray-600 font-extrabold text-5xl text-center "> Pet Grooming service that comes to your home </p><br/>  
     <h1 class="text-gray-500 font-bold text-3xl  text-center"> Instantly Book a Professional Pet Groomer Online, Whenever you need one.
  </h1><br/><br/>   
-    <button type="button" class="py-4 px-56  flex justify-center items-center gap-2 rounded-md border border-transparent font-bold bg-orange-500 mx-auto mb-10 text-white hover:bg-gray-900 focus:outline-none focus:ring-2 focus:ring-gray-800 focus:ring-offset-2 transition-all text-sm dark:focus:ring-gray-900 dark:focus:ring-offset-gray-800">
-  Book a Groomer</button> 
+ <Link to = '/PetGrommingForm'>
+    <button type="button" class="py-4 px-40  flex justify-center items-center gap-2 rounded-md border border-transparent font-bold bg-orange-500 mx-auto mb-10 text-white hover:bg-gray-900 focus:outline-none focus:ring-2 focus:ring-gray-800 focus:ring-offset-2 transition-all text-sm dark:focus:ring-gray-900 dark:focus:ring-offset-gray-800">
+  Book a Groomer</button></Link>
       
       </div>
     </div>
@@ -43,9 +45,10 @@ const Petgrooming = () => {
     <div className=' relative  box-content mx-auto bg-white shadow-2xl md:mt-32  rounded-lg pt-4 md:top-[250px] top-[150px] md:px-28 px-2 py-8 '>
     <p class="text-gray-600 md:text-2xl font-extrabold text-lg text-center "> Pet Grooming service that comes<br/> to your home  </p><br/>  
     <h1 class="text-gray-500 font-semibold text-base text-center"> Instantly Book a Professional Pet Groomer<br className='md:hidden'/> Online,<br className='hidden md:block'/> Whenever you need one.
- </h1><br/>   
+ </h1><br/> 
+ <Link to = '/PetGrommingForm'>  
     <button type="button" class="py-3 px-20 mx-auto  flex justify-center items-center gap-2 rounded-md border border-transparent font-bold bg-orange-500  mb-0 text-white hover:bg-gray-900 focus:outline-none focus:ring-2 focus:ring-gray-800 focus:ring-offset-2 transition-all text-sm dark:focus:ring-gray-900 dark:focus:ring-offset-gray-800">
-      Book a Groomer</button>
+      Book a Groomer</button></Link>
       
       </div>
     </div>

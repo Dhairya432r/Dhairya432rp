@@ -1,28 +1,96 @@
-import React from 'react'
+import React, { useEffect, useState,Fragment,useRef } from 'react';
+import axios from 'axios';
+import Cookies from 'js-cookie';
+import { Dialog, Transition } from '@headlessui/react';
+import {useNavigate,Link} from 'react-router-dom'
+// import { ExclamationIcon } from '@heroicons/react/outline';
+import {
+  Button,
+  Card,
+  CardHeader,
+  CardBody,
+  CardFooter,
+  Typography,
+  Input,
+  Checkbox,
+} from "@material-tailwind/react";
+import NavBar from './NavBar';
 
-const Adoptselector = () => {
+const Candiate = ({pet}) => {
+  const handleEditClick = () => {
+    // Navigate to the edit form page with the pet's ID included in the URL
+    navigate(`/Edit/${pet._id}`);
+  };
+  const [pets, setPets] = useState([]);
+  const [filteredPets, setFilteredPets] = useState([]);
+
+  useEffect(() => {
+    const fetchUserPets = async () => {
+      try {
+        const mobileNumber = Cookies.get('mobileNumber');
+    
+        if (!mobileNumber) {
+          // Handle error: Mobile number not found in cookies
+          return;
+        }
+    
+        const response = await axios.get(`https://server4-qtq0.onrender.com/api/pets`, {
+          headers: {
+            'Content-Type': 'application/json',
+            'mobileNumber': mobileNumber
+          }
+        });
+        
+        setPets(response.data);
+      } catch (error) {
+        console.error(error);
+        // Handle error: Display an error message or redirect to an error page
+      }
+    };
+    
+
+    fetchUserPets();
+  }, []);
+
+  const handleDelete = async (id) => {
+    try {
+      await axios.delete(`https://server4-qtq0.onrender.com/api/pets/${id}`);
+      setPets(pets.filter(pet => pet._id !== id));
+      setFilteredPets(filteredPets.filter(pet => pet._id !== id));
+    } catch (error) {
+      console.error(error);
+    }
+  };
+  const [open, setOpen] = useState(false);
+  const handleOpen = () => setOpen((cur) => !cur);
+
+  const cancelButtonRef = useRef(null);
+  const navigate = useNavigate();
+
   return (
+    <>
+    <NavBar /><br/><br/>
     <div>
-<h1>Your Pets</h1>
+<h1 className='text-MainGray text-[38px] mt-10 animate-bounce text-center font-bold'>Your Pets</h1><hr className='w-32 flex justify-center mx-auto h-0 animate-pulse border-2'/>
 {pets.map(pet => (
   <div key={pet._id}>
-    <h2>{pet.name}</h2>
-    <p>Age: {pet.age}</p>
+    {/* <h2>{pet.name}</h2>
+    <p>Age: {pet.age}</p> */}
 
-    <div class="overflow-hidden rounded-lg border border-gray-200 shadow-md m-5">
+    <div class=" overflow-scroll rounded-lg border border-gray-200 shadow-md m-5">
 <table class="w-full border-collapse bg-white text-left text-sm text-gray-500">
 <thead class="bg-gray-50">
 <tr>
   <th scope="col" class="px-6 py-4 font-medium text-gray-900">Name</th>
   <th scope="col" class="px-6 py-4 font-medium text-gray-900">State</th>
   <th scope="col" class="px-6 py-4 font-medium text-gray-900">Role</th>
-  <th scope="col" class="px-6 py-4 font-medium text-gray-900">Team</th>
+  <th scope="col" class="px-6 py-4 font-medium text-gray-900">Quality</th>
   <th scope="col" class="px-6 py-4 font-medium text-gray-900"></th>
 </tr>
 </thead>
 <tbody class="divide-y divide-gray-100 border-t border-gray-100">
 <tr class="hover:bg-gray-50">
-  <th class="flex gap-3 px-6 py-4 font-normal text-gray-900">
+  <th class="inline-block gap-3 px-6 py-4 font-normal text-gray-900">
     <div class="relative h-10 w-10">
       <img
         class="h-full w-full rounded-full object-cover object-center"
@@ -44,23 +112,23 @@ const Adoptselector = () => {
       {pet.state},{pet.city}
     </span>
   </td>
-  <td class="px-6 py-4">{pet.age}</td>
+  <td class="inline-flex items-center gap-1 rounded-full bg-orange-100 px-2 py-1 text-xs font-semibold text-orange-500">{pet.age}</td>
   <td class="px-6 py-4">
     <div class="flex gap-2">
       <span
         class="inline-flex items-center gap-1 rounded-full bg-blue-50 px-2 py-1 text-xs font-semibold text-blue-600"
       >
-        Design
+        Attractive
       </span>
       <span
         class="inline-flex items-center gap-1 rounded-full bg-indigo-50 px-2 py-1 text-xs font-semibold text-indigo-600"
       >
-        Product
+       Charming
       </span>
       <span
         class="inline-flex items-center gap-1 rounded-full bg-violet-50 px-2 py-1 text-xs font-semibold text-violet-600"
       >
-        Develop
+        Loyal
       </span>
     </div>
   </td>
@@ -184,8 +252,9 @@ const Adoptselector = () => {
 </Transition.Root>
 </section>
 
-      <a x-data="{ tooltip: 'Edite' }" href="#">
-        <svg
+<a x-data="{ tooltip: 'Edite' }" >
+<Link to={`/Edit/${pet._id}`}> 
+<svg
           xmlns="http://www.w3.org/2000/svg"
           fill="none"
           viewBox="0 0 24 24"
@@ -200,7 +269,60 @@ const Adoptselector = () => {
             d="M16.862 4.487l1.687-1.688a1.875 1.875 0 112.652 2.652L6.832 19.82a4.5 4.5 0 01-1.897 1.13l-2.685.8.8-2.685a4.5 4.5 0 011.13-1.897L16.863 4.487zm0 0L19.5 7.125"
           />
         </svg>
+        </Link>
       </a>
+      {/* <section>  <Button onClick={handleOpen}>Sign In</Button>
+      <Dialog
+        size="xs"
+        open={open}
+        handler={handleOpen}
+        className="bg-transparent shadow-none"
+      >
+        <Card className="mx-auto w-full max-w-[24rem]">
+          <CardBody className="flex flex-col gap-4">
+            <Typography variant="h4" color="blue-gray">
+              Sign In
+            </Typography>
+            <Typography
+              className="mb-3 font-normal"
+              variant="paragraph"
+              color="gray"
+            >
+              Enter your email and password to Sign In.
+            </Typography>
+            <Typography className="-mb-2" variant="h6">
+              Your Email
+            </Typography>
+            <Input label="Email" size="lg" />
+            <Typography className="-mb-2" variant="h6">
+              Your Password
+            </Typography>
+            <Input label="Password" size="lg" />
+            <div className="-ml-2.5 -mt-3">
+              <Checkbox label="Remember Me" />
+            </div>
+          </CardBody>
+          <CardFooter className="pt-0">
+            <Button variant="gradient" onClick={handleOpen} fullWidth>
+              Sign In
+            </Button>
+            <Typography variant="small" className="mt-4 flex justify-center">
+              Don&apos;t have an account?
+              <Typography
+                as="a"
+                href="#signup"
+                variant="small"
+                color="blue-gray"
+                className="ml-1 font-bold"
+                onClick={handleOpen}
+              >
+                Sign up
+              </Typography>
+            </Typography>
+          </CardFooter>
+        </Card>
+      </Dialog></section> */}
+    
     </div>
   </td>
 </tr>
@@ -212,7 +334,16 @@ const Adoptselector = () => {
   </div>
 ))}
 </div> 
-  )
-}
 
-export default Adoptselector
+  </>  
+  );
+};
+
+export default Candiate;
+
+
+
+
+
+
+

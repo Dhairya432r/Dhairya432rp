@@ -37,7 +37,7 @@ const Home = () => {
    <div class="absolute left-0 right-0 grid place-items-center">
    <img src="./assets/images/img2.jpg" alt="" className="   h-[512px] w-full  " /> 
    </div>
-    <div class=" relative box-content bg-white shadow-2xl   rounded-sm  top-[400px] mx-auto px-0  py-10  w-[1050px]">
+    <div class=" relative box-content bg-white shadow-2xl   rounded-sm  top-[380px] mx-auto px-0  py-0  w-[1050px]">
       
       <h1 class="text-gray-600 font-extrabold text-[43px]  ml-40 "> Re-Home and Adopt a Pet in India </h1><br/>  
       <h1 class="text-gray-500 font-semibold text-2xl  text-center">Every Pet Deserves a Good Home. #Adoptlove </h1><br/>  

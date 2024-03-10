@@ -37,16 +37,16 @@ const Pet = () => {
         <div className=" lg:inline-block  hidden">
 
           <p className="lg:text-2xl sm:text-xl font-bold text-gray-700  ml-44 lg:ml-6 lg:mb-1 mt-8">Search Pet</p>
-          <p className="text-xl text-gray-500 ml-6">Adopt a dog or cat who's right for you. Simply enter your<br />city above to start your search.</p>
+          <p className="text-xl text-gray-500 ml-6">Adopt a dog or cat who's right for you. Simply enter your<br className="  lg:block" />city above to start your search.</p>
           <br />
           <p className="text-2xl font-bold text-gray-700 ml-6 mb-1 mt-8">Connect</p>
-          <p className="text-xl text-gray-500 ml-6">Once you find a pet, click "show number" to get contact<br />info for their pet parent or rescue. Contact them to learn<br />more about how to meet and adopt the pet.</p>
+          <p className="text-xl text-gray-500 ml-6">Once you find a pet, click "show number" to get contact<br className="  lg:block" />info for their pet parent or rescue. Contact them to learn<br />more about how to meet and adopt the pet.</p>
           <br />
           <p className="text-2xl font-bold text-gray-700 ml-6 mb-1 mt-1">AdoptLove</p>
-          <p className="text-xl text-gray-500 ml-6">The rescue or pet parents will walk you through their<br />adoption process. Prepare your home for the arrival of<br /></p>
+          <p className="text-xl text-gray-500 ml-6">The rescue or pet parents will walk you through their<br className="  lg:block" />adoption process. Prepare your home for the arrival of<br /></p>
           <br />
           <p className="text-2xl font-bold text-gray-700 ml-6 mb-1 mt-8">Free Vet Consultation</p>
-          <p className="text-xl text-gray-500 ml-6">ThePetNest will help your pet to settle down in its new<br />home, once you complete the Adoption journey reach out<br />to us for free vet consultation.</p>
+          <p className="text-xl text-gray-500 ml-6">ThePetNest will help your pet to settle down in its new<br className="  lg:block" />home, once you complete the Adoption journey reach out<br />to us for free vet consultation.</p>
         </div>
       </div>
       <br />
@@ -56,14 +56,14 @@ const Pet = () => {
         <img src="./assets/images/search.png" className=" h-[100px] pl-1 md:h-36 md:ml-0 md:w-36 w-[100px] " />
         <div className="inline-block  ">
           <p className="md:text-4xl text-2xl font-bold text-gray-700   ml-6  md:ml-0  sm lg:mb-1 ">Search Pet</p>
-          <p className="text-xl md:text-2xl md:ml-0 text-gray-500 ml-6">Adopt a dog or cat who's right for you. Simply enter your<br />city above to start your search.</p>
+          <p className="text-xl md:text-2xl md:ml-0 text-gray-500 ml-6">Adopt a dog or cat who's right for you. Simply enter your city above to start your search.</p>
         </div>
        </div>
       <div className="flex lg:hidden md:flex md:justify-center ">
       <img src="./assets/images/24-hours.png" className="h-[100px] md:ml-0 md:h-36  md:w-36 pl-1 w-[100px]  mt-8 ml-1 " />
         <div className="inline-block">
         <p className="text-2xl md:text-4xl font-bold text-gray-700 md:ml-0 ml-6 mb-1 md:pt-8 md:mt-1 mt-8">Connect</p>
-          <p className="text-xl md:text-2xl text-gray-500 md:ml-0 ml-6">Once you find a pet, click "show number" to get contact info <br /> for their pet parent or rescue. Contact them to learn more <br /> about how to meet and adopt the pet.</p>
+          <p className="text-xl md:text-2xl text-gray-500 md:ml-0 ml-6">Once you find a pet, click "show number" to get contact info for their pet parent or rescue. Contact them to learn more  about how to meet and adopt the pet.</p>
           <br />
         </div>
        </div>
@@ -72,14 +72,14 @@ const Pet = () => {
       <img src="./assets/images/pet.png" className="h-[100px] md:ml-0 md:h-36 md:w-36 pl-1 w-[100px] mb-10 mt-8 ml-1" />
         <div className="inline-block">
         <p className="text-2xl md:text-4xl md:ml-0 font-bold text-gray-700 ml-6 mb-1 mt-8">AdoptLove</p>
-          <p className="text-xl md:text-2xl md:ml-0 text-gray-500 ml-6">The rescue or pet parents will walk you through their ado-<br className="md:block" />ption process. Prepare your home for the arrival<br className="md:block hidden"/> of your fur baby to<br className="md:hidden" /> help them adjust to their new family.</p> 
+          <p className="text-xl md:text-2xl md:ml-0 text-gray-500 ml-6">The rescue or pet parents will walk you through their adoption process. Prepare your home for the arrival<br className="md:block hidden"/> of your fur baby to<br className="md:hidden" /> help them adjust to their new family.</p> 
         </div>
        </div>
       <div className="flex lg:hidden md:flex md:justify-center">
       <img src="./assets/images/consulting.png" className="h-[100px] md:ml-0 md:h-36 md:w-36 pl-1 w-[100px] mb-10 mt-8 ml-1" />
         <div className="inline-block">
         <p className="text-2xl md:text-4xl md:ml-0 font-bold text-gray-700 ml-6 mb-1 mt-8">Free Vet Consultation</p>
-          <p className="text-xl md:text-2xl md:ml-0 text-gray-500 ml-6">Addo pet will help your pet to settle down in its new home,<br /> once you complete the Adop-tion journey reach out to <br /> us for free vet consultation.</p> 
+          <p className="text-xl md:text-2xl md:ml-0 text-gray-500 ml-6">Addo pet will help your pet to settle down in its new home, once you complete the Adop-tion journey reach out to  us for free vet consultation.</p> 
         </div>
        </div>
        <br/>

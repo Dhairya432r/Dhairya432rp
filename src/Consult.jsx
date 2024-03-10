@@ -3,6 +3,7 @@ import NavBar from './NavBar'
 import Question2 from './Question2'
 import Question from './Question'
 import Footer from './Footer'
+import { Link } from 'react-router-dom'
 
 const Consult = () => {
   const gotoBtn3 = () => {
@@ -14,17 +15,17 @@ const Consult = () => {
     {/* lg mate che */}
     <div className='lg:block hidden'> 
     <div class="">
-  <div class="absolute left-0 right-0 grid place-items-center">
+  <div class="absolute left-0 mt-5 right-0 grid place-items-center">
   <img src='https://dm6g3jbka53hp.cloudfront.net/static-images/pet-vet-banner-30032020.jpg' className='w-full  h-[430px]    '/>
   </div>
 </div>
 <div className=''>
     <div className='absolute left-0 right-0 grid place-items-center'>
-    <div className=' relative  box-content mx-auto bg-white shadow-2xl   rounded-sm pt-4 top-[300px] px-24 py-8 '>
-    <p class="text-gray-600 font-extrabold text-5xl text-center "> 24x7 Online Vet Consultation & Home Visits </p><br/>  
-    <h1 class="text-gray-500 font-bold text-3xl  text-center"> Your pet deserves only the best </h1><br/><br/>   
-    <button type="button" class="py-4 px-56  flex justify-center items-center gap-2 rounded-md border border-transparent font-bold bg-orange-500 mx-auto mb-10 text-white hover:bg-gray-900 focus:outline-none focus:ring-2 focus:ring-gray-800 focus:ring-offset-2 transition-all text-sm dark:focus:ring-gray-900 dark:focus:ring-offset-gray-800">
-  Pet Insurance</button>
+    <div className=' relative  box-content mx-auto bg-white drop-shadow-lg   rounded-sm pt-4 top-[300px] px-14 py-8 '>
+    <p class="text-[#515252] font-extrabold text-[40px] text-center "> 24x7 Online Vet Consultation & Home Visits </p><br/>  
+    <h1 class="text-[#515252] font-medium text-xl  text-center"> Book Trusted Veterinary Consultation For Pets Near You </h1><br/><br/>   
+<Link to = "/ConsultpetForm"><button type="button" class="py-4 px-56  flex justify-center items-center gap-2 rounded-md border border-transparent font-bold bg-orange-500 mx-auto mb-10 text-white hover:bg-gray-900 focus:outline-none focus:ring-2 focus:ring-gray-800 focus:ring-offset-2 transition-all text-sm dark:focus:ring-gray-900 dark:focus:ring-offset-gray-800">
+  Pet Insurance</button></Link>
   
       
       </div>
@@ -41,11 +42,11 @@ const Consult = () => {
 </div>
 <div className=''>
     <div className='absolute left-0 right-0 grid place-items-center'>
-    <div className=' relative  box-content mx-auto bg-white shadow-2xl   rounded-sm pt-4 md:top-[250px] top-[150px] px-5 md:px-16 py-10 '>
-    <p class="text-gray-600 font-extrabold text-lg text-center "> 24x7 Online Vet Consultation &<br/> Home Visits </p><br/>  
-    <h1 class="text-gray-500 font-semibold text-base  text-center"> Your pet deserves only the best </h1><br/>   
-    <button type="button" class="py-3 px-20   flex justify-center items-center gap-2 rounded-md border border-transparent font-bold bg-orange-500 lg:ml-[350px] mx-auto  mb-0 text-white hover:bg-gray-900 focus:outline-none focus:ring-2 focus:ring-gray-800 focus:ring-offset-2 transition-all text-sm dark:focus:ring-gray-900 dark:focus:ring-offset-gray-800">
-      vet consultation</button>
+    <div className=' relative  box-content mx-auto bg-white shadow-2xl rounded-2xl pt-4 md:top-[250px] top-[150px] px-5 md:px-28  py-10 '>
+    <p class="text-gray-600 font-extrabold text-lg md:text-2xl text-center "> 24x7 Online Vet Consultation &<br/> Home Visits </p><br/>  
+    <h1 class="text-gray-500 font-semibold text-base md:text-xl text-center"> Your pet deserves only the best </h1><br/>   
+<Link to = "/ConsultpetForm"><button type="button" class="py-3 px-20   flex justify-center items-center gap-2 rounded-md border border-transparent font-bold bg-orange-500 lg:ml-[350px] mx-auto  mb-0 text-white hover:bg-gray-900 focus:outline-none focus:ring-2 focus:ring-gray-800 focus:ring-offset-2 transition-all text-sm dark:focus:ring-gray-900 dark:focus:ring-offset-gray-800">
+      vet consultation</button></Link>
       
       </div>
     </div>
@@ -153,7 +154,7 @@ How Online Veterinarian Service works?
 
 {/* lg mate che */}
 <div className='lg:flex hidden'>
-<div className='box-content shadow-md rounded-sm bg-slate-200 h-[500px] w-[1000px] mx-auto mt-28'>
+<div className='box-content shadow-md rounded-sm bg-[#F0F6FF] h-[500px] w-[1000px] mx-auto mt-28'>
 <div className='flex '>
 <div className='my-auto ml-10'>
 <h1><span className='text-7xl text-gray-600 font-bold'>Starts At</span><br/>
@@ -210,13 +211,13 @@ How Online Veterinarian Service works?
 </div>
 <div className='flex mt-16 md:justify-center'> 
 <div className='inline-block  mx-10   '>
-  <img src='./assets/images/blue tick.png' className='h-14 mb-2 w-14'/>
-  <img src='./assets/images/blue tick.png' className='h-14 mb-4 w-14'/>
-  <img src='./assets/images/blue tick.png' className='h-14 mb-2 w-14'/>
-  <img src='./assets/images/blue tick.png' className='h-14 mb-2 w-14'/>
-  <img src='./assets/images/blue tick.png' className='h-14 mb-2 w-14'/>
-  <img src='./assets/images/blue tick.png' className='h-14 mb-2 w-14'/>
-  <img src='./assets/images/blue tick.png' className='h-14 mb-2 w-14'/>
+  <img src='./assets/images/bluetick.png' className='h-14 mb-2 w-14'/>
+  <img src='./assets/images/bluetick.png' className='h-14 mb-4 w-14'/>
+  <img src='./assets/images/bluetick.png' className='h-14 mb-2 w-14'/>
+  <img src='./assets/images/bluetick.png' className='h-14 mb-2 w-14'/>
+  <img src='./assets/images/bluetick.png' className='h-14 mb-2 w-14'/>
+  <img src='./assets/images/bluetick.png' className='h-14 mb-2 w-14'/>
+  <img src='./assets/images/bluetick.png' className='h-14 mb-2 w-14'/>
   </div>
   <div className='inline-block mt-2  font-semibold '>
     <h1 className='  mt-1  '>On Demand Consultations</h1>
@@ -235,8 +236,8 @@ How Online Veterinarian Service works?
  
 
 
-<div className='box-content bg-zinc-900 lg:h-[350px] h-[250px] w-full  mt-10 '>
-  <h1 className='lg:mb-20 mb-10 text-zinc-900'>hello</h1>
+<div className='box-content bg-zinc-900  w-full  mt-10 '>
+
 
   <h1 className='lg:text-3xl  font-semibold text-lg text-center   text-white'>Addo pet is India’s Most Trusted Online Veterinary Health Care Consultation</h1>
    <h1 className='lg:text-3xl font-semibold text-lg text-center text-white'>Service provider. Experienced veterinarians provide immediate, personalized and</h1>

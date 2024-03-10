@@ -7,6 +7,9 @@ module.exports = withMT({
       poppins: ["Poppins", "sans-serif"],
       adelia: [ "cursive"],
     },
+    colors: {
+      'MainGray':'#515252'
+    },
     extend: {},
     
   },
@@ -14,4 +17,4 @@ module.exports = withMT({
     require('preline/plugin'),
   ],
 });
-
+  // "homepage": "https://Dhairya432r.github.io/Dhairya432rp",
