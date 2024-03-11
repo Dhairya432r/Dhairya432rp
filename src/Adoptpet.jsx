@@ -3,6 +3,7 @@ import axios from 'axios';
 import { Link } from 'react-router-dom';
 import NavBar from './NavBar';
 import Petdetails from './Petdetails';
+import Loader from './Loader'
 const Adoptpet = () => {
   const [pets, setPets] = useState([]);
   const [selectedState, setSelectedState] = useState('');
@@ -39,7 +40,9 @@ const Adoptpet = () => {
       console.error(error);
     }
   };
-
+  if (!pets) {
+    return <Loader />;
+  }
   return (
     <>
 <NavBar />

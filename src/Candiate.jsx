@@ -15,6 +15,7 @@ import {
   Checkbox,
 } from "@material-tailwind/react";
 import NavBar from './NavBar';
+import Loader from './Loader';
 
 const Candiate = ({pet}) => {
   const handleEditClick = () => {
@@ -66,6 +67,11 @@ const Candiate = ({pet}) => {
 
   const cancelButtonRef = useRef(null);
   const navigate = useNavigate();
+
+  if (!pets) {
+    return <Loader/>;
+  }
+
 
   return (
     <>

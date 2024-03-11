@@ -4,6 +4,7 @@ import axios from 'axios';
 import { useParams, Link } from 'react-router-dom';
 import NavBar from'./NavBar'
 import { Carousel, IconButton } from "@material-tailwind/react";
+import Loader from './Loader';
 import('preline')
 
 const PetDetails = () => {
@@ -25,7 +26,7 @@ const PetDetails = () => {
 
 
   if (!pet) {
-    return <div>Loading...</div>;
+    return <Loader/>;
   }
 
   return (

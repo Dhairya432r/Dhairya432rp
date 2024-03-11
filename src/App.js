@@ -14,7 +14,7 @@ import Relocation from './Relocation';
 import About from './About';
 import Blogs from './Blogs';
 import State from './State';
-import Loader2 from './Loader2';
+import Loader from './Loader';
 import PetDetails from './Petdetails';
 import PetForm from './PetForm';
 import Dhairya from './Dhairya';
@@ -52,7 +52,7 @@ function App() {
    <Route path="/Blogs" element={<Blogs/>}/> 
    <Route path="/About" element={<About/>}/> 
    <Route path="/State" element={<State/>}/> 
-   <Route path="/Loader2" element={<Loader2/>}/>
+   <Route path="/Loader" element={<Loader/>}/>
    <Route path="/PetForm" element={<PetForm/>}/>
    <Route path="/PetGrommingForm" element={<PetGrommingForm/>}/>
    <Route path="/Petdetails/:id" element={<PetDetails />} /> 
