@@ -51,7 +51,7 @@ import { ChevronUpIcon } from '@heroicons/react/20/solid'
                 />
               </Disclosure.Button>
               <Disclosure.Panel className="px-4 pt-4 pb-2 text-sm text-gray-500">
-              ThePetNest vet on call support can be used in any scenario where you are unsure about the health and well being of your pet. Don't take a chance with your pet's health by delaying the treatment or sift through thousands of Google search results on your own.
+              AddoPet vet on call support can be used in any scenario where you are unsure about the health and well being of your pet. Don't take a chance with your pet's health by delaying the treatment or sift through thousands of Google search results on your own.
              </Disclosure.Panel>
             </>
           )}
@@ -72,7 +72,7 @@ import { ChevronUpIcon } from '@heroicons/react/20/solid'
 
 Your vet will prescribe your pet’s medications and will provide his general advice.<br/><br/>
 You will be asked to rate the service of the vet.<br/><br/>
-You will be followed up by our ThePetNest team to ensure your pet's good health.<br/>
+You will be followed up by our AddoPet team to ensure your pet's good health.<br/>
               </Disclosure.Panel>
             </>
           )}

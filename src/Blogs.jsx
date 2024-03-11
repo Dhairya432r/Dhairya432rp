@@ -4,7 +4,7 @@ import Footer from './Footer'
 const Blogs = () => {
   return (
     <>
-    <NavBar/>
+    <NavBar/><br/>
    
 
       <div class="h-56 w-full  relative">

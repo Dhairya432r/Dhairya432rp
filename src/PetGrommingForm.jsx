@@ -87,7 +87,7 @@ const PetGrommingForm = () => {
     };
   
     try {
-      await axios.post("https://server4-qtq0.onrender.com/api/gromming", data,
+      await axios.post("https://server4-qtq0.onrender.com/api/pets", data,
       
        {
         headers: {

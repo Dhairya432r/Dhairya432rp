@@ -78,7 +78,7 @@ const Insurance = () => {
     </div>
     </div><div className='lg:hidden md:hidden block'><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/></div>
 
-<div className='box-content  bg-white lg:h-[260px] h-[400px] w-[80%] mx-auto mb-16'>
+<div className='box-content  bg-white lg:h-[260px] h-[425px] w-[80%] mx-auto mb-16'>
     <h1 className='text-4xl text-gray-600 font-bold text-center mt-16 lg:mt-0 mb-10'>What is a Pet Insurance?</h1>
     <p className='text-xl text-left text-gray-500 '>
     Pet insurance is exactly what health insurance is for humans. Pet insurance is an insurance policy that is customized to cover the veterinary expenses of your dog.
@@ -87,7 +87,7 @@ A pet without insurance can be expensive to maintain overall health and well-bei
     </p>
 </div>
     
-<div className='box-content bg-[#F4F5F6]  lg:h-[600px] h-[1400px] md:h-[1500px] w-full '><br/>
+<div className='box-content bg-[#F4F5F6]  lg:h-[600px] h-[1500px] md:h-[1500px] w-full '><br/>
     <h1 className='text-4xl font-bold text-gray-600 text-center lg:mt-0 mt-20 '>Why would you need Pet Insurance?</h1>
 <div className='lg:flex justify-evenly mt-16'>
     <div className='lg:inline-block'>
