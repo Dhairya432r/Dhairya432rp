@@ -14,7 +14,7 @@ const PetDetails = () => {
   useEffect(() => {
     const fetchPetDetails = async () => {
       try {
-        const response = await axios.get(`http://localhost:5000/api/pets/${id}`);
+        const response = await axios.get(`https://server4-qtq0.onrender.com/api/pets/${id}`);
         setPet(response.data);
       } catch (error) {
         console.error(error);

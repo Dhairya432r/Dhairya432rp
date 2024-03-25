@@ -278,7 +278,7 @@ const Loader = () => {
 
 <>
 <style>{cssStyles}</style>
-<div className='flex justify-center  mt-[15%]'>
+<div className='flex justify-center lg:mt-36 mt-40 '>
 <div  aria-label="Orange and tan hamster running in a metal wheel" role="img" class="wheel-and-hamster">
 	<div class="wheel"></div>
 	<div class="hamster">

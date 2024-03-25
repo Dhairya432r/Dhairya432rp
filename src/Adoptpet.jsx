@@ -103,7 +103,7 @@ const Adoptpet = () => {
           </div>
         </div>
       </div>
-      <div className='box-content w-[95%]  border-[1px] lg:w-[900px] lg:ml-[30%] rounded-lg h-full lg:border-2 border-gray-400'>
+      <div className='box-content w-[95%] mx-auto  border-[1px] lg:w-[900px] lg:ml-[30%] rounded-lg h-full lg:border-2 border-gray-400'>
       <h1 className='text-3xl text-center animate-bounce  pt-3 text-orange-600  '>Available pets for adoption</h1>
         <div className=' md:flex md:flex-wrap lg:flex lg:flex-wrap gap-3 space-y-5 lg:space-y-0 md:space-y-0 pt-10 justify-center '>
         
@@ -129,7 +129,7 @@ const Adoptpet = () => {
                     </div>
 
                   </div>
-                  <button onClick={() => handleDelete(pet._id)}>Delete</button>
+                  {/* <button onClick={() => handleDelete(pet._id)}>Delete</button> */}
 
                 </div></Link>
               </div>
@@ -137,6 +137,8 @@ const Adoptpet = () => {
             ))
           ) : (
             <>
+            
+
             <div className=''>
         <div className='dog-container'>
           <img className='dog-gif h-44 ' src='https://media.tenor.com/oQBNNsF1jA8AAAAi/darklajka-wsl.gif' alt='Running dog' />

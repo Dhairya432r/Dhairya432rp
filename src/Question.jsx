@@ -34,7 +34,7 @@ import { ChevronUpIcon } from '@heroicons/react/20/solid'
                 />
               </Disclosure.Button>
               <Disclosure.Panel className="px-4 pt-4 pb-2 text-sm text-gray-500">
-              No, there is no fee for pet adoption on ThePetnest. However, if you adopt from a different city pet owner/rescuer can ask for travel charges. In case if you find someone asking for charges you can write us at support@Addopet.com.
+              No, there is no fee for pet adoption on Addopet. However, if you adopt from a different city pet owner/rescuer can ask for travel charges. In case if you find someone asking for charges you can write us at support@Addopet.com.
               </Disclosure.Panel>
             </>
           )}
