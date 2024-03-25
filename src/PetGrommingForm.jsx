@@ -102,7 +102,7 @@ const PetGrommingForm = () => {
     };
   
     try {
-      await axios.post("https://server4-qtq0.onrender.com/api/pets", data,
+      await axios.post("https://server4-qtq0.onrender.com/api/gromming", data,
       
        {
         headers: {
@@ -127,7 +127,7 @@ const PetGrommingForm = () => {
       console.log('Error occurred:', error);
       if (error.response) {
         // Server responded with a status code that falls out of the range of 2xx
-        toast.error('🦄 Wow so easy!', {
+        toast.error('sorry try again!', {
           position: "top-center",
           autoClose: 5000,
           hideProgressBar: false,
