@@ -1,4 +1,4 @@
-import React,{useState} from 'react'
+import React,{useState,useEffect} from 'react'
 import { useNavigate } from 'react-router-dom'
 import Cookies from 'js-cookie'
 import NavBar from './NavBar'
@@ -31,6 +31,17 @@ const PetGrommingForm = () => {
   const[old,setOld] = useState('');
   const [username,setusername] = useState('');
   const mobileNumber = Cookies.get('mobileNumber');
+
+  const history = useNavigate();
+  useEffect(() => {
+    // Check if the mobile number exists in cookies
+    const mobileNumber = Cookies.get('mobileNumber');
+
+    if (!mobileNumber) {
+      // Mobile number doesn't exist in cookies, navigate to login page
+      history('/Dhairya'); // Redirect to your login page route
+    }
+  }, [history]);
 
   const handleimage = () => {
     setType('Cat');
