@@ -87,7 +87,7 @@ const PetGrommingForm = () => {
     e.preventDefault();
   
     const data = {
-      type,name,gender,size,old,aggressive,date,time,
+      type,name,gender,size,old,aggressive,date,time,username,mobileNumber
     };
   
     try {
