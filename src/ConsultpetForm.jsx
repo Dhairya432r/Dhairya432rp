@@ -67,7 +67,7 @@ const history = useNavigate();
 
   const handleSubmit = async (e) => {
     e.preventDefault();
-  const consult = {service,Disease,Society,Flat,Street,Pin,selectedState,selectedCity,type,name,age,weight,breed,gender,aggressive,vaccinated,date,time,Price  }; 
+  const consult = {service,Disease,Society,Flat,Street,Pin,selectedState,selectedCity,username,mobileNumber,type,name,age,weight,breed,gender,aggressive,vaccinated,date,time,Price  }; 
    try {
     await axios.post("https://server4-qtq0.onrender.com/api/consult",consult,
     {
