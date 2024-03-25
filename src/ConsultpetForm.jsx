@@ -1,4 +1,6 @@
-import React, { useState } from 'react';
+import React, { useState,useEffect } from 'react';
+import { useNavigate } from 'react-router-dom';
+import Cookies from 'js-cookie';
 import NavBar from './NavBar';
 import Footer from "./Footer"
 import axios from 'axios';
@@ -39,7 +41,19 @@ const ConsultpetForm = ({ price, details }) => {
   const[time,setTime] = useState('')
   const [detail,setdetail] = useState('');
   const [address, setAddress] = useState('');
+  const [username,setusername] = useState('');
+  const mobileNumber = Cookies.get('mobileNumber');
 
+const history = useNavigate();
+  useEffect(() => {
+    // Check if the mobile number exists in cookies
+    const mobileNumber = Cookies.get('mobileNumber');
+
+    if (!mobileNumber) {
+      // Mobile number doesn't exist in cookies, navigate to login page
+      history('/Dhairya'); // Redirect to your login page route
+    }
+  }, [history]);
 
 
 
@@ -414,7 +428,7 @@ return(
           <>
             {/* Step 3 content */}
             <div>
-            <h1 className='pl-[10%] text-3xl  text-center font-bold text-gray-800'>Add new address</h1>
+            <h1 className='pl-[10%] text-3xl  text-center font-bold text-gray-800'>Add new address & Personal details</h1>
             <h1 className='pl-[10%] lg:text-xs text-lg font-bold text-gray-800'>Your Society/locality/Landmark</h1>
               <input
                 type='text'
@@ -489,6 +503,16 @@ return(
             </div>
             </div>
             </div>
+            <label className='lg:text-xl text-2xl lg:pt-14 pt-6 pl-[10%]  text-gray-600 font-semibold'>Personal Details</label><hr className='ml-[10%] border-2 mb-8 w-[80%]' />
+        
+        <div className='lg:flex md:flex inline justify-center gap-6'>
+          <div className='lg:flex lg:pl-0 pl-[10%]'>
+            <div className=' lg:text-xl md:text-lg font-bold text-gray-800 '>Owner Name:</div><input required value={username} onChange={(e)=> setusername(e.target.value)} className=' w-[80%] lg:w-[340px] h-14 lg:h-10 rounded-md text-2xl lg:text-2xl bg-gray-400  border-[2.5px]  border-gray-300  text-gray-900 sm:text-sm  focus:ring-primary-600 focus:border-primary-600 transition duration-1000   dark:bg-orange-500 dark:border-orange-500 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 block dark:focus:border-blue-500 hover:border-orange-500'></input>
+          </div>
+          <div className='lg:flex lg:pl-0 pl-[10%]'>
+          <h1 className='lg:text-xl md:text-lg font-bold text-gray-800'>Mobile No.</h1><div class="box-content  w-[80%] lg:w-[340px] h-14 lg:h-10 rounded-md text-2xl bg-gray-400  border-[2.5px]  border-gray-300  text-gray-900 sm:text-sm  focus:ring-primary-600 focus:border-primary-600 transition duration-1000   dark:bg-orange-500 dark:border-orange-500 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 block dark:focus:border-blue-500 hover:border-orange-500 "><p className='flex justify-center mx-auto mt-3 lg:mt-1 text-2xl'>+{mobileNumber}</p></div><br/>
+          </div>
+          </div>
             {/* {additionalDetails} */}
             {/* You can add a form or more information here based on the selected service */}
           </div>
