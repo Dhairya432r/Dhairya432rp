@@ -35,7 +35,7 @@ const Candiate = ({pet}) => {
           return;
         }
     
-        const response = await axios.get(`https://server4-qtq0.onrender.com/api/pets`, {
+        const response = await axios.get(`https://server4-qtq0.onrender.com/api/pets/pets`, {
           headers: {
             'Content-Type': 'application/json',
             'mobileNumber': mobileNumber
